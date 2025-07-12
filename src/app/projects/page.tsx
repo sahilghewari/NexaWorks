@@ -133,7 +133,7 @@ export default function ProjectsPage() {
 
         {/* Projects Grid */}
         <div className="projects-grid grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <Card
               key={project.title}
               className={`project-card bg-white/70 backdrop-blur-sm border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${

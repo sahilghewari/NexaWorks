@@ -13,15 +13,16 @@ interface TiltHTMLElement extends HTMLDivElement {
 type TiltCardProps = {
   children: ReactNode;
   className?: string;
-  options?: any;
+  options?: Record<string, unknown>;
 };
 
 export default function TiltCard({ children, options, className }: TiltCardProps) {
   const tiltRef = useRef<TiltHTMLElement | null>(null);
 
   useEffect(() => {
-    if (tiltRef.current) {
-      VanillaTilt.init(tiltRef.current, options || {
+    const tiltNode = tiltRef.current;
+    if (tiltNode) {
+      VanillaTilt.init(tiltNode, options || {
         max: 12,
         speed: 400,
         glare: true,
@@ -30,9 +31,9 @@ export default function TiltCard({ children, options, className }: TiltCardProps
     }
 
     return () => {
-      tiltRef.current?.vanillaTilt?.destroy();
+      tiltNode?.vanillaTilt?.destroy();
     };
-  }, []);
+  }, [options]);
 
   return (
     <div ref={tiltRef} className={className}>

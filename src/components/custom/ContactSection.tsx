@@ -56,7 +56,7 @@ export default function ContactSection() {
                 <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                   <Check className="w-4 h-4 text-purple-800" />
                 </div>
-                <span className="text-gray-800 text-lg">{benefit}</span>
+                <span className="text-gray-800 text-lg">{benefit.replace("'", "&apos;")}</span>
               </div>
             ))}
           </div>

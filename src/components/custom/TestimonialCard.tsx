@@ -23,7 +23,7 @@ export default function TestimonialCard({ quote, name, title, avatar }: Testimon
           </div>
         </div>
 
-        <blockquote className="text-gray-700 text-center mb-8 leading-relaxed">"{quote}"</blockquote>
+        <blockquote className="text-gray-700 text-center mb-8 leading-relaxed">&quot;{quote}&quot;</blockquote>
       </div>
 
       <div className="text-center">

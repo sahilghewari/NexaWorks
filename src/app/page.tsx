@@ -9,9 +9,6 @@ import {
   Code,
   Palette,
   Zap,
-  Braces,
-  Apple,
-  Smartphone,
 } from "lucide-react";
 import Link from "next/link";
 import HeroCTA from "@/components/custom/Hero-cta";
