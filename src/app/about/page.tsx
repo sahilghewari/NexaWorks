@@ -103,20 +103,20 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold mb-6 text-gray-800">My Story</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
   <p>
-    👋 Hey! I'm Pavan, a passionate full-stack developer based in India. My journey into tech began with a deep curiosity
+    👋 Hey! Im Pavan, a passionate full-stack developer based in India. My journey into tech began with a deep curiosity
     for how apps work behind the scenes 🧐 and that curiosity quickly turned into a career I love.
   </p>
   <p>
     I specialize in building modern, responsive web and mobile applications using technologies like React, Next.js, Node.js,
-    and React Native. Whether it's crafting seamless user interfaces or structuring efficient APIs, ☺️ I enjoy solving real-world
+    and React Native. Whether its crafting seamless user interfaces or structuring efficient APIs, ☺️ I enjoy solving real-world
     problems with clean and scalable code.
   </p>
   <p>
-    Recently, I've been focused on cross-platform app development using React Native, creating apps that work beautifully on both
+    Recently, Ive been focused on cross-platform app development using React Native, creating apps that work beautifully on both
     Android 📱 and iOS 🍎. I also have experience with MongoDB, SQL, and cloud integrations that support robust backend services.
   </p>
   <p>
-    When I’m not coding, I enjoy exploring new tools, brainstorming product ideas, and occasionally binge-watching dev content
+    When Im not coding, I enjoy exploring new tools, brainstorming product ideas, and occasionally binge-watching dev content
     or motivational podcasts and sometimes jamming with my guitar 🎸. I believe great tech is built with passion, clarity, and a lot of coffee!
   </p>
 </div>
@@ -129,7 +129,7 @@ export default function AboutPage() {
         <div className="about-section skills-section mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">Skills & Technologies</h2>
           <div className="flex flex-wrap gap-3 justify-center">
-            {skills.map((skill, index) => (
+            {skills.map((skill) => (
               <Badge
                 key={skill}
                 className="skill-badge bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 text-sm font-medium hover:shadow-lg transition-shadow duration-300"
@@ -142,7 +142,7 @@ export default function AboutPage() {
 
         {/* Interests Section */}
         <div className="about-section interests-section">
-          <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">When I'm Not Coding</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">When Im Not Coding</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="interest-card bg-white/70 backdrop-blur-sm border-white/20 shadow-lg hover:shadow-xl transition-all duration-300">
               <CardContent className="p-6 text-center">

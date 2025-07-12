@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react"
 
 export default function ContactPage() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -90,10 +90,10 @@ export default function ContactPage() {
         {/* Header */}
         <div className="contact-header text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 bg-clip-text text-transparent mb-6">
-            Let's Connect
+            Lets Connect
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? I'd love to hear from you!
+            Have a project in mind or just want to chat? Id love to hear from you!
           </p>
         </div>
 

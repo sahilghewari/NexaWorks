@@ -5,10 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import {
-  ArrowRight,
-  Code,
-  Palette,
-  Zap,
+  ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 import HeroCTA from "@/components/custom/Hero-cta";
@@ -120,7 +117,7 @@ export default function HomePage() {
                 size="lg"
                 className="border-2 border-[#C8B6FF] text-[#C8B6FF] hover:bg-[#B8C0FF] hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 cursor-pointer"
               >
-                Let's Talk
+                Lets Talk
               </Button>
             </Link>
           </div>
