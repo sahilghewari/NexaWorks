@@ -80,7 +80,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50">
       {/* Hero Section */}
       <section
         ref={heroRef}
@@ -90,7 +90,7 @@ export default function HomePage() {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full opacity-20 float"></div>
           <div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full opacity-20 float"
+            className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-purple-400 to-yellow-400 rounded-full opacity-20 float"
             style={{ animationDelay: "1s" }}
           ></div>
           <div
@@ -100,10 +100,10 @@ export default function HomePage() {
         </div>
 
         <div className="text-center z-10 max-w-4xl mx-auto">
-          <h1 className="hero-title text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent mb-6">
+          <h1 className="hero-title text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#b8a0ff] via-[#f9c3f9] to-[#B8C0FF] bg-clip-text text-transparent mb-6">
             Welcome to NexaWorks
           </h1>
-          <p className="hero-subtitle text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto">
+          <p className="hero-subtitle text-xl md:text-2xl text-gray-500 mb-8 max-w-2xl mx-auto">
             We provide complete digital solutions: Websites, Apps, Video
             Editing, Designing, Marketing & more.
           </p>
@@ -111,7 +111,7 @@ export default function HomePage() {
             <Link href="/projects">
               <Button
                 size="lg"
-                className="cursor-pointer bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                className="cursor-pointer bg-[#B8C0FF] hover:bg-[#C8B6FF] text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -121,7 +121,7 @@ export default function HomePage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300"
+                className="border-2 border-[#C8B6FF] text-[#C8B6FF] hover:bg-[#B8C0FF] hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 cursor-pointer"
               >
                 Let's Talk
               </Button>
@@ -133,79 +133,16 @@ export default function HomePage() {
       {/* Features Section */}
       <section ref={featuresRef} className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <ServicesGrid/>
-
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-[#B8C0FF] to-[#B8C0FF] bg-clip-text text-transparent">
             Our Services
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="feature-card bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
-                <Code className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                Website Development
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Modern, responsive websites built for your brand and business
-                goals.
-              </p>
-            </div>
-            <div className="feature-card bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-violet-500 rounded-2xl flex items-center justify-center mb-6">
-                <Smartphone className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                App Development
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Android & iOS apps with smooth UI, fast performance, and native
-                features.
-              </p>
-            </div>
-            <div className="feature-card bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
-                <Palette className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                Designing
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Creative UI/UX, branding, and graphic design for digital and
-                print.
-              </p>
-            </div>
-            <div className="feature-card bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
-                <Apple className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                Video Editing
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Professional video editing for marketing, social media, and
-                more.
-              </p>
-            </div>
-            <div className="feature-card bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-2xl flex items-center justify-center mb-6">
-                <Zap className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">
-                Marketing
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Digital marketing strategies to grow your business and reach
-                your audience.
-              </p>
-            </div>
-          </div>
+          <ServicesGrid/>
         </div>
       </section>
 
       <TestimonialsCarousel />
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container my-40 mx-auto px-4 py-8">
         <HeroCTA />
       </div>
 

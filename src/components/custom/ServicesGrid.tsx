@@ -7,28 +7,28 @@ const services = [
     id: "discover",
     title: "Discover",
     description:
-      "We conduct a thorough market research, competitor analysis, target audience, and clients' requirement.",
+      "Unlock insights with deep market research, competitor analysis, and tailored strategies for your business growth.",
     icon: Lightbulb,
     position: "top-left",
   },
   {
     id: "web-dev",
     title: "Web Development",
-    description: "Design and developing immersive web applications and portals to drive digital transformation.",
+    description: "Craft stunning, high-performance websites and portals that elevate your brand and engage users.",
     icon: Code,
     position: "center",
   },
   {
     id: "app-dev",
     title: "App Development",
-    description: "We implement functionalities to bring the App into life.",
+    description: "Transform ideas into powerful mobile experiences with seamless functionality and beautiful design.",
     icon: Smartphone,
     position: "top-right",
   },
   {
     id: "designing",
     title: "Designing",
-    description: "We create a research-driven design to visualize and dive deep in your industry.",
+    description: "Bring your vision to life with creative, research-driven designs that captivate and inspire.",
     icon: Monitor,
     position: "bottom-left",
   },
@@ -36,14 +36,14 @@ const services = [
     id: "marketing",
     title: "Marketing",
     description:
-      "We constantly measure our efforts to engage new customers, increase ROI, and achieve unique business goals.",
+      "Accelerate growth with data-driven marketing strategies that attract, engage, and convert your audience.",
     icon: Megaphone,
     position: "bottom-center",
   },
   {
     id: "ai",
     title: "Artificial intelligence",
-    description: "Redefining speed with precision to maximize enterprise value with AI, ML, and RPA solutions.",
+    description: "Empower your business with intelligent automation and AI solutions for smarter decision-making.",
     icon: Cpu,
     position: "bottom-right",
   },
@@ -51,7 +51,7 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <section className="py-16 px-6 bg-white">
+    <section className="py-16 px-6 ">
       <div className="max-w-6xl mx-auto">
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -65,7 +65,7 @@ export default function ServicesGrid() {
               title={services[1].title}
               description={services[1].description}
               icon={services[1].icon}
-              className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200"
+              className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200"
             />
           </div>
 
@@ -91,7 +91,7 @@ export default function ServicesGrid() {
         <div className="text-center">
           <Button
             variant="outline"
-            className="border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-3 bg-transparent"
+            className="border-purple-500 text-purple-500 hover:bg-purple-50 px-8 py-3 bg-transparent"
           >
             Show more
             <ChevronDown className="ml-2 w-4 h-4" />

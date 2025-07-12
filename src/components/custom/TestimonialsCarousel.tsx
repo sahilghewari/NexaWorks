@@ -7,7 +7,7 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "Any team would find the Whiteboard App a difficult project to undertake. I'm glad we went with Banao for the App development, which is currently shipped in our Android TV.",
+      "Any team would find the Whiteboard App a difficult project to undertake. I'm glad we went with NexaWorks for the App development, which is currently shipped in our Android TV.",
     name: "Vinod Rajpal",
     title: "Project Manager, Whiteboard App.",
     avatar: "/placeholder.svg?height=80&width=80",
@@ -15,7 +15,7 @@ const testimonials = [
   {
     id: 2,
     quote:
-      "Banao has met all of our project requirements on time. They are highly recommended because they function as your in-house team.",
+      "NexaWorks has met all of our project requirements on time. They are highly recommended because they function as your in-house team.",
     name: "Rachiket Arya",
     title: "Co-founder and CTO, Jackett",
     avatar: "/placeholder.svg?height=80&width=80",
@@ -23,7 +23,7 @@ const testimonials = [
   {
     id: 3,
     quote:
-      "Banao, in my opinion, is one of the accolades it has received. I have confidence in this group to reach new heights in the foreseeable future.",
+      "NexaWorks, in my opinion, is one of the accolades it has received. I have confidence in this group to reach new heights in the foreseeable future.",
     name: "Dr.Chet Trivedy",
     title: "Chief Medical Advisor, Trust (WCT)",
     avatar: "/placeholder.svg?height=80&width=80",
@@ -31,7 +31,7 @@ const testimonials = [
   {
     id: 4,
     quote:
-      "Working with Banao has been an exceptional experience. Their attention to detail and commitment to quality is unmatched.",
+      "Working with NexaWorks has been an exceptional experience. Their attention to detail and commitment to quality is unmatched.",
     name: "Sarah Johnson",
     title: "CEO, TechStart Inc.",
     avatar: "/placeholder.svg?height=80&width=80",
@@ -39,7 +39,7 @@ const testimonials = [
   {
     id: 5,
     quote:
-      "The team at Banao delivered beyond our expectations. Their innovative approach helped us achieve our goals faster.",
+      "The team at NexaWorks delivered beyond our expectations. Their innovative approach helped us achieve our goals faster.",
     name: "Michael Chen",
     title: "CTO, InnovateLab",
     avatar: "/placeholder.svg?height=80&width=80",
@@ -84,9 +84,9 @@ export default function TestimonialsCarousel() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gray-500">Clients are talking</span>
+            <span className="text-purple-800">Clients are talking</span>
             <br />
-            <span className="text-orange-500">and they sound happy</span>
+            <span className="text-[#9c7bfd]">and they sound happy</span>
           </h2>
         </div>
 
@@ -117,7 +117,7 @@ export default function TestimonialsCarousel() {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "bg-orange-500 scale-125" : "bg-gray-300 hover:bg-gray-400"
+                index === currentIndex ? "bg-[#B8C0FF] scale-125" : "bg-gray-300 hover:bg-gray-400"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

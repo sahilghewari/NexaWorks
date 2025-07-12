@@ -2,24 +2,21 @@ import { Linkedin, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-orange-50 py-16 px-6">
+    <footer className="bg-[#C8B6FF] py-16 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header with logo and social icons */}
         <div className="flex justify-between items-center mb-12">
           <div className="flex items-center">
-            <div className="text-orange-500 text-2xl font-bold">
-              <span className="text-orange-500">◊</span> BANAO
+            <div className="text-purple-800 text-2xl font-bold">
+              <span className="text-purple-800">◊</span> NexaWorks
             </div>
           </div>
           <div className="flex space-x-3">
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-              <div className="w-6 h-6 bg-gradient-to-br from-blue-400 to-green-400 rounded"></div>
-            </div>
             <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-              <Linkedin className="w-5 h-5 text-white" />
+              <Linkedin className="w-5 h-5 text-purple-800" />
             </div>
             <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center">
-              <Instagram className="w-5 h-5 text-white" />
+              <Instagram className="w-5 h-5 text-purple-800" />
             </div>
           </div>
         </div>
@@ -28,7 +25,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-orange-500 font-semibold text-lg mb-4">About</h3>
+            <h3 className="text-purple-800 font-semibold text-lg mb-4">About</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-600 hover:text-gray-800">
@@ -40,7 +37,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-orange-500 font-semibold text-lg mb-4">Services</h3>
+            <h3 className="text-purple-800 font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
                 <a href="#" className="hover:text-gray-800">
@@ -88,7 +85,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-orange-500 hover:text-orange-600">
+                <a href="#" className="text-purple-800 hover:text-orange-600">
                   More...
                 </a>
               </li>
@@ -97,7 +94,7 @@ export default function Footer() {
 
           {/* Industries */}
           <div>
-            <h3 className="text-orange-500 font-semibold text-lg mb-4">Industries</h3>
+            <h3 className="text-purple-800 font-semibold text-lg mb-4">Industries</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
                 <a href="#" className="hover:text-gray-800">
@@ -140,7 +137,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-orange-500 hover:text-orange-600">
+                <a href="#" className="text-purple-800 hover:text-orange-600">
                   More...
                 </a>
               </li>
@@ -149,7 +146,7 @@ export default function Footer() {
 
           {/* Portfolio */}
           <div>
-            <h3 className="text-orange-500 font-semibold text-lg mb-4">Portfolio</h3>
+            <h3 className="text-purple-800 font-semibold text-lg mb-4">Portfolio</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
                 <a href="#" className="hover:text-gray-800">
@@ -192,7 +189,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-orange-500 hover:text-orange-600">
+                <a href="#" className="text-purple-800 hover:text-orange-600">
                   More...
                 </a>
               </li>
@@ -201,7 +198,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-orange-500 font-semibold text-lg mb-4">Resources</h3>
+            <h3 className="text-purple-800 font-semibold text-lg mb-4">Resources</h3>
             <ul className="space-y-2 text-gray-600">
               <li>
                 <a href="#" className="hover:text-gray-800">

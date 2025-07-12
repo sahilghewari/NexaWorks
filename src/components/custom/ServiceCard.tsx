@@ -11,11 +11,11 @@ interface ServiceCardProps {
 export default function ServiceCard({ title, description, icon: Icon, className = "" }: ServiceCardProps) {
   return (
     <TiltCard
-      className={`bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow duration-300 ${className}`}
+      className={`h-75 w-80 bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow duration-300 ${className}`}
     >
       <div className="flex justify-center mb-6">
-        <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center">
-          <Icon className="w-8 h-8 text-orange-500" strokeWidth={1.5} />
+        <div className="w-16 h-16 bg-[#FFD6FF] rounded-2xl flex items-center justify-center">
+          <Icon className="w-8 h-8 text-[#C8B6FF]" strokeWidth={1.5} />
         </div>
       </div>
 

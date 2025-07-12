@@ -45,7 +45,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
         {/* Left side - Benefits */}
         <div>
-          <h2 className="text-orange-500 text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="text-[#9c7bfd] text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Let's Build Something Great Together. 🤝
           </h2>
           <p className="text-gray-600 mb-8">Here is what you will get for submitting your contact details.</p>
@@ -54,7 +54,7 @@ export default function ContactSection() {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-4 h-4 text-white" />
+                  <Check className="w-4 h-4 text-purple-800" />
                 </div>
                 <span className="text-gray-800 text-lg">{benefit}</span>
               </div>
@@ -65,7 +65,7 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-gray-500" />
-              <span className="text-gray-600">Hello@Banao.tech</span>
+              <span className="text-gray-600">Hello@NexaWorks.tech</span>
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-gray-500" />
@@ -76,7 +76,7 @@ export default function ContactSection() {
 
         {/* Right side - Form */}
         <div>
-          <div className="bg-orange-500 text-white p-6 rounded-t-2xl text-center">
+          <div className="bg-[#C8B6FF] text-purple-800 p-6 rounded-t-2xl text-center">
             <h3 className="text-xl font-semibold">GET IN TOUCH WITH OUR EXPERTS TO TURN YOUR IDEA INTO REALITY.</h3>
           </div>
 
@@ -101,28 +101,15 @@ export default function ContactSection() {
               required
             />
 
-            <div className="relative">
-              <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-2">
-                <div className="w-6 h-4 bg-orange-500 relative">
-                  <div className="absolute top-0 left-0 w-6 h-1.5 bg-orange-500"></div>
-                  <div className="absolute top-1.5 left-0 w-6 h-1 bg-white"></div>
-                  <div className="absolute top-2.5 left-0 w-6 h-1.5 bg-green-600"></div>
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 border-2 border-blue-800 rounded-full bg-white">
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-0.5 bg-blue-800"></div>
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0.5 h-6 bg-blue-800"></div>
-                  </div>
-                </div>
-              </div>
               <Input
                 type="tel"
                 name="phone"
                 placeholder="Phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="bg-white border-gray-200 pl-12"
+                className="bg-white border-gray-200"
                 required
               />
-            </div>
 
             <Textarea
               name="message"
@@ -135,7 +122,7 @@ export default function ContactSection() {
 
             <Button
               type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg font-medium"
+              className="w-full bg-[#B8C0FF] hover:bg-[#C8B6FF] text-purple-800 py-3 text-lg font-medium cursor-pointer"
             >
               Submit
             </Button>
