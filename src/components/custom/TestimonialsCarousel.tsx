@@ -2,6 +2,10 @@
 
 import { useState, useEffect } from "react"
 import TestimonialCard from "./TestimonialCard"
+import image1 from "@/assests/images.jpeg"
+import image2 from "@/assests/images2.jpeg"
+import image3 from "@/assests/images3.jpeg"
+import image4 from "@/assests/images4.jpeg"
 
 const testimonials = [
   {
@@ -10,7 +14,7 @@ const testimonials = [
       "Any team would find the Whiteboard App a difficult project to undertake. I'm glad we went with NexaWorks for the App development, which is currently shipped in our Android TV.",
     name: "Vinod Rajpal",
     title: "Project Manager, Whiteboard App.",
-    avatar: require("@/assests/images.jpeg"),
+    avatar: image1,
   },
   {
     id: 2,
@@ -18,7 +22,7 @@ const testimonials = [
       "NexaWorks has met all of our project requirements on time. They are highly recommended because they function as your in-house team.",
     name: "Rachiket Arya",
     title: "Co-founder and CTO, Jackett",
-    avatar: require("@/assests/images2.jpeg"),
+    avatar: image2,
   },
   {
     id: 3,
@@ -26,7 +30,7 @@ const testimonials = [
       "NexaWorks, in my opinion, is one of the accolades it has received. I have confidence in this group to reach new heights in the foreseeable future.",
     name: "Dr.Chet Trivedy",
     title: "Chief Medical Advisor, Trust (WCT)",
-    avatar: require("@/assests/images3.jpeg"),
+    avatar: image3,
   },
   {
     id: 4,
@@ -34,7 +38,7 @@ const testimonials = [
       "Working with NexaWorks has been an exceptional experience. Their attention to detail and commitment to quality is unmatched.",
     name: "Sarah Johnson",
     title: "CEO, TechStart Inc.",
-    avatar: require("@/assests/images4.jpeg"),
+    avatar: image4,
   },
   {
     id: 5,
@@ -42,7 +46,7 @@ const testimonials = [
       "The team at NexaWorks delivered beyond our expectations. Their innovative approach helped us achieve our goals faster.",
     name: "Michael Chen",
     title: "CTO, InnovateLab",
-    avatar: require("@/assests/images2.jpeg"),
+    avatar: image2,
   },
 ]
 
