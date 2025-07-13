@@ -1,10 +1,10 @@
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 
 interface TestimonialCardProps {
   quote: string
   name: string
   title: string
-  avatar: string
+  avatar: string | StaticImageData
 }
 
 export default function TestimonialCard({ quote, name, title, avatar }: TestimonialCardProps) {
