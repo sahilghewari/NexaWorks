@@ -1,2 +1,2 @@
 text 9c7bfd main(text-purple-800)
-FFD6FF, E7C6FF, main(C8B6FF), B8C0FF, BBD0FF
+FFD6FF, E7C6FF, main(C8B6FF, 9c7bfd), B8C0FF, BBD0FF
