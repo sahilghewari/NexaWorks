@@ -20,7 +20,7 @@ const faqs: FAQ[] = [
         id: 2,
         question: "How long does it take to build a mobile app?",
         answer:
-            "Simple apps usually take 2-3 months. More complex apps may take 4-6 months or longer. We'll give you a clear timeline after our first consultation.",
+            "Simple apps usually take 2-3 months. More complex apps may take 4-6 months or longer. We&lsquo;ll give you a clear timeline after our first consultation.",
     },
     {
         id: 3,
@@ -115,7 +115,7 @@ export default function FAQSection({
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Still have questions?</h3>
             <p className="text-gray-600 mb-6">
-              Can't find the answer you're looking for? Our team is here to help you with any questions about our
+              Can&lsquo;t find the answer you&lsquo;re looking for? Our team is here to help you with any questions about our
               services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

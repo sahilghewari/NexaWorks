@@ -5,8 +5,17 @@ import DigitalMarketing from "@/components/animation/DigitalMarketing";
 import Designer from "@/components/animation/Designer";
 import Testing from "@/components/animation/Testing";
 
+// Type for Simple Icons
+export type SimpleIcon = {
+  title: string;
+  slug: string;
+  hex: string;
+  source: string;
+  svg: string;
+  path: string;
+};
 
-export const iconSlugMap: Record<string, any> = {
+export const iconSlugMap: Record<string, SimpleIcon> = {
   React: siReact,
   "Tailwind CSS": siTailwindcss,
   Gsap: siGreensock,
