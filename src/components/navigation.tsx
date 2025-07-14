@@ -71,60 +71,58 @@ export default function Navigation() {
                             <div>
                               <div className="text-[#9c7bfd] font-semibold mb-2">Web Development</div>
                               <ul className="border-l pl-4 space-y-1">
-                                <li><NavigationMenuLink asChild><Link href="#">Web Development</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">PHP/Laravel Development</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/web-development">Web Development</Link></NavigationMenuLink></li>
+                                {/* <li><NavigationMenuLink asChild><Link href="#">PHP/Laravel Development</Link></NavigationMenuLink></li> */}
                                 <li><NavigationMenuLink asChild><Link href="#">MEAN Stack</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">MERN Stack</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">NodeJs Development</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Django Web Development</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">ReactJs Development</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/web-development">NodeJs Development</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/web-development">ReactJs Development</Link></NavigationMenuLink></li>
                               </ul>
                             </div>
                             {/* App Development */}
                             <div>
                               <div className="text-[#9c7bfd] font-semibold mb-2">App Development</div>
                               <ul className="border-l pl-4 space-y-1">
-                                <li><NavigationMenuLink asChild><Link href="#">Progressive Web App Development</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">React Native App Development</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Android App Development</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Flutter App Development</Link></NavigationMenuLink></li>
+                                {/* <li><NavigationMenuLink asChild><Link href="/projects/app-development">Progressive Web App Development</Link></NavigationMenuLink></li> */}
+                                <li><NavigationMenuLink asChild><Link href="/projects/app-development">React Native App Development</Link></NavigationMenuLink></li>
+                                {/* <li><NavigationMenuLink asChild><Link href="/projects/app-development">Android App Development</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/app-development">Flutter App Development</Link></NavigationMenuLink></li> */}
                               </ul>
                             </div>
                             {/* Marketing */}
                             <div>
                               <div className="text-[#9c7bfd] font-semibold mb-2">Marketing</div>
                               <ul className="border-l pl-4 space-y-1">
-                                <li><NavigationMenuLink asChild><Link href="#">Digital Marketing</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Social Media Marketing</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Content Marketing</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Sales Strategy</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Leads Generation</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">YouTube Marketing</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Email Marketing</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/marketing">Digital Marketing</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/marketing">Social Media Marketing</Link></NavigationMenuLink></li>
+                                {/* <li><NavigationMenuLink asChild><Link href="/projects/marketing">Content Marketing</Link></NavigationMenuLink></li> */}
+                                <li><NavigationMenuLink asChild><Link href="/projects/marketing">Sales Strategy</Link></NavigationMenuLink></li>
+                                {/* <li><NavigationMenuLink asChild><Link href="/projects/marketing">Leads Generation</Link></NavigationMenuLink></li> */}
+                                {/* <li><NavigationMenuLink asChild><Link href="/projects/marketing">YouTube Marketing</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/marketing">Email Marketing</Link></NavigationMenuLink></li> */}
                               </ul>
                             </div>
                             {/* Design */}
                             <div>
                               <div className="text-[#9c7bfd] font-semibold mb-2 mt-8 lg:mt-0">Design</div>
                               <ul className="border-l pl-4 space-y-1">
-                                <li><NavigationMenuLink asChild><Link href="#">Graphic Design</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">User Interface Design</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">User Experience Design</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">User Experience Review</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/design">Graphic Design</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/design">User Interface Design</Link></NavigationMenuLink></li>
+                                {/* <li><NavigationMenuLink asChild><Link href="/projects/design">User Experience Design</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/design">User Experience Review</Link></NavigationMenuLink></li> */}
                               </ul>
                             </div>
                             {/* QA and DevOps */}
                             <div>
                               <div className="text-[#9c7bfd] font-semibold mb-2 mt-8 lg:mt-0">QA and DevOps</div>
                               <ul className="border-l pl-4 space-y-1">
-                                <li><NavigationMenuLink asChild><Link href="#">Quality Assurance and Consulting</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Manual Testing</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Pixel Perfect UI Testing</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Selenium Testing</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Appium Automation</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Test Automation in DevOps</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">Server Monitoring and Alerts</Link></NavigationMenuLink></li>
-                                <li><NavigationMenuLink asChild><Link href="#">DevOps Consulting</Link></NavigationMenuLink></li>
+                                {/* <li><NavigationMenuLink asChild><Link href="/projects/qa-and-devops">Quality Assurance and Consulting</Link></NavigationMenuLink></li> */}
+                                <li><NavigationMenuLink asChild><Link href="/projects/qa-and-devops">Manual Testing</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/qa-and-devops">Pixel Perfect UI Testing</Link></NavigationMenuLink></li>
+                                {/* <li><NavigationMenuLink asChild><Link href="/projects/qa-and-devops">Selenium Testing</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/qa-and-devops">Appium Automation</Link></NavigationMenuLink></li>
+                                <li><NavigationMenuLink asChild><Link href="/projects/qa-and-devops">Test Automation in DevOps</Link></NavigationMenuLink></li> */}
+                                {/* <li><NavigationMenuLink asChild><Link href="/projects/qa-and-devops">Server Monitoring and Alerts</Link></NavigationMenuLink></li> */}
+                                <li><NavigationMenuLink asChild><Link href="/projects/qa-and-devops">DevOps Consulting</Link></NavigationMenuLink></li>
                               </ul>
                             </div>
                           </div>

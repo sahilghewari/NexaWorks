@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import HeroCTA from "@/components/custom/Hero-cta";
-import Footer from "@/components/custom/Footer";
 import ContactSection from "@/components/custom/ContactSection";
 import TestimonialsCarousel from "@/components/custom/TestimonialsCarousel";
 import ServicesGrid from "@/components/custom/ServicesGrid";
@@ -153,8 +152,6 @@ export default function HomePage() {
       </div>
 
       <ContactSection />
-
-      <Footer />
     </div>
   );
 }
