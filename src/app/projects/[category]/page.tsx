@@ -6,18 +6,20 @@ import {
 } from "@/data/projectCategories";
 import FAQSection from "@/components/custom/FAQSection";
 import HeroCTA from "@/components/custom/Hero-cta";
-export default function ProjectCategoryPage({
+
+export default async function ProjectCategoryPage({
   params,
 }: {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 }) {
-  const category = projectCategories.find(
-    (cat) => cat.slug === params.category
+  const { category } = await params;
+  const categoryObj = projectCategories.find(
+    (cat) => cat.slug === category
   );
 
-  if (!category) return notFound();
+  if (!categoryObj) return notFound();
 
-  const AnimationComponent = animationMap[category.slug];
+  const AnimationComponent = animationMap[categoryObj.slug];
 
   return (
     <>
@@ -25,10 +27,10 @@ export default function ProjectCategoryPage({
         <div className="w-2/3 h-screen sticky top-0">
           <div className="z-50">
             <h1 className="text-xl font-semibold mt-20 mb-16 text-[#9c7bfd]">
-              {category.name}
+              {categoryObj.name}
             </h1>
             <p className="text-6xl font-bold text-gray-600">
-              {category.description}
+              {categoryObj.description}
             </p>
           </div>
           <div className="">{AnimationComponent && <AnimationComponent />}</div>
@@ -36,10 +38,10 @@ export default function ProjectCategoryPage({
 
         <div>
           <h1 className="text-6xl font-semibold text-[#9c7bfd]">
-            <span>{category.name}</span> Included
+            <span>{categoryObj.name}</span> Included
           </h1>
           <div className="flex flex-col justify-center items-center mt-4 gap-5">
-            {category.techStack.map((techStack) => {
+            {categoryObj.techStack.map((techStack) => {
               const icon = iconSlugMap[techStack.title];
               return (
                 <div
