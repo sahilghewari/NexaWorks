@@ -20,6 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.cdnfonts.com/css/doumbar" rel="stylesheet" />
+      </head>
       <body className={inter.className}>
         <Navigation />
         <main className="pt-16">{children}</main>

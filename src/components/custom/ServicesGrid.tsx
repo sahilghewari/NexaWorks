@@ -88,7 +88,7 @@ export default function ServicesGrid() {
         </div>
 
         {/* Show More Button */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <Button
             variant="outline"
             className="border-purple-500 text-purple-500 hover:bg-purple-50 px-8 py-3 bg-transparent"
@@ -96,7 +96,7 @@ export default function ServicesGrid() {
             Show more
             <ChevronDown className="ml-2 w-4 h-4" />
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   )
