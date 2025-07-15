@@ -42,7 +42,7 @@ const services = [
   },
   {
     id: "ai",
-    title: "Artificial intelligence",
+    title: "A.I.",
     description: "Empower your business with intelligent automation and AI solutions for smarter decision-making.",
     icon: Cpu,
     position: "bottom-right",
@@ -65,7 +65,6 @@ export default function ServicesGrid() {
               title={services[1].title}
               description={services[1].description}
               icon={services[1].icon}
-              className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200"
             />
           </div>
 

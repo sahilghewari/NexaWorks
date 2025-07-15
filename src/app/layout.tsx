@@ -25,7 +25,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Navigation />
-        <main className="pt-16">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
