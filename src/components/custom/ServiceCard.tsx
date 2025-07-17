@@ -8,7 +8,7 @@ interface ServiceCardProps {
   className?: string
 }
 
-export default function ServiceCard({ title, description, icon: Icon, className = "" }: ServiceCardProps) {
+export default function ServiceCard({ title, icon: Icon, className = "" }: ServiceCardProps) {
   return (
     <TiltCard
       className={`h-45 w-80 bg-white rounded-2xl p-8  border border-[#31312f] text-center duration-300 ${className}`}

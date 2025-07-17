@@ -1,6 +1,5 @@
 
 import { Code, BrainCircuit, Workflow, Cloud } from "lucide-react"
-import ServiceCard from "./ServiceCard"
 
 const services = [
   {

@@ -1,4 +1,5 @@
-import { Linkedin, Instagram } from "lucide-react"
+import { Linkedin } from "lucide-react"
+import Link from "next/link"
 import Image from "next/image"
 
 export default function Footer() {
@@ -8,23 +9,23 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col gap-8 md:flex-row md:items-start md:justify-between w-full">
         {/* Left Section: Logo & Tagline */}
         <div className="flex flex-col items-center md:items-start w-full md:w-1/3 mb-6 md:mb-0">
-          <a href="/" className="mb-2">
+          <Link href="/" className="mb-2">
             <Image src="/images/Logo.png" alt="NexaWorks Logo" width={110} height={40} className="h-auto" />
-          </a>
+          </Link>
           <span className="text-[#F5F5F5] text-sm italic font-light">Exceptional Software. Affordable Prices.</span>
         </div>
 
         {/* Center Section: Navigation & Legal */}
         <div className="flex flex-col items-center md:items-center w-full md:w-2/5">
           <div className="flex flex-row gap-8 mb-2 flex-wrap justify-center">
-            <a href="/" className="hover:text-[#9c7bfd] font-semibold">Home</a>
-            <a href="/services" className="hover:text-[#9c7bfd] font-semibold">Services</a>
-            <a href="/about" className="hover:text-[#9c7bfd] font-semibold">About</a>
-            <a href="/contact" className="hover:text-[#9c7bfd] font-semibold">Contact</a>
+            <Link href="/" className="hover:text-[#9c7bfd] font-semibold">Home</Link>
+            <Link href="/services" className="hover:text-[#9c7bfd] font-semibold">Services</Link>
+            <Link href="/about" className="hover:text-[#9c7bfd] font-semibold">About</Link>
+            <Link href="/contact" className="hover:text-[#9c7bfd] font-semibold">Contact</Link>
           </div>
           <div className="flex flex-row gap-6 text-xs mt-2 mb-2 justify-center">
-            <a href="/privacy" className="hover:text-[#9c7bfd]">Privacy Policy</a>
-            <a href="/terms" className="hover:text-[#9c7bfd]">Terms of Service</a>
+            <Link href="/privacy" className="hover:text-[#9c7bfd]">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#9c7bfd]">Terms of Service</Link>
           </div>
         </div>
 
@@ -33,7 +34,7 @@ export default function Footer() {
           <a href="mailto:contact@nexaworks.com" className="text-[#F5f5f5] text-sm hover:text-[#9c7bfd]">contact@nexaworks.com</a>
           {/* Optional phone number */}
           {/* <span className="text-sm">+1-800-NEXAWORKS</span> */}
-          <a href="/contact" className="mt-1 text-[#9c7bfd] font-semibold text-sm hover:underline">Get in Touch</a>
+          <Link href="/contact" className="mt-1 text-[#9c7bfd] font-semibold text-sm hover:underline">Get in Touch</Link>
           <div className="flex flex-row gap-3 mt-2">
             <a href="https://linkedin.com/company/nexaworks" target="_blank" rel="noopener" aria-label="LinkedIn">
               <Linkedin className="w-6 h-6 text-[#C8C8C8] hover:text-[#9c7bfd] transition" />

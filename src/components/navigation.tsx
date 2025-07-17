@@ -2,15 +2,13 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { gsap } from "gsap"
+import Image from "next/image"
 
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const pathname = usePathname()
 
   useEffect(() => {
     // Animate navigation on mount
@@ -21,12 +19,6 @@ export default function Navigation() {
     )
   }, [])
 
-  const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/#contact" },
-  ]
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -179,6 +171,7 @@ export default function Navigation() {
         {/* Logo */}
         <div className="flex items-center">
           <img src="https://i.postimg.cc/y6mgZBHc/Logo.png" alt="Website Logo" className="h-7 w-auto" />
+          <Image src="https://i.postimg.cc/y6mgZBHc/Logo.png" alt="Website Logo" width={100} height={28} className="h-7 w-auto" />
           <span className="text-[#F5F5F5] ml-3 text-2xl md:text-3xl font-bold">NEXAWORKS</span>
         </div>
         {/* Desktop Nav */}
