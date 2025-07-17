@@ -181,7 +181,7 @@ export default function Navigation() {
     //     )}
     //   </div>
     // </nav>
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 bg-transperent">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-3 bg-blur backdrop-blur-md  border-b border-white/20 shadow-sm">
             {/* Logo on the left */}
             <div className="flex items-center">
               <img

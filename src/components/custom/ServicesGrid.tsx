@@ -1,101 +1,78 @@
-import { Lightbulb, Code, Smartphone, Monitor, Cpu, Megaphone, ChevronDown } from "lucide-react"
+
+import { Code, BrainCircuit, Workflow, Cloud } from "lucide-react"
 import ServiceCard from "./ServiceCard"
-import { Button } from "@/components/ui/button"
 
 const services = [
   {
-    id: "discover",
-    title: "Discover",
+    id: "custom-software",
+    title: "Custom Software Development",
     description:
-      "Unlock insights with deep market research, competitor analysis, and tailored strategies for your business growth.",
-    icon: Lightbulb,
-    position: "top-left",
-  },
-  {
-    id: "web-dev",
-    title: "Web Development",
-    description: "Craft stunning, high-performance websites and portals that elevate your brand and engage users.",
+      "Build tailored, scalable software solutions to meet your unique business needs, from web apps to enterprise systems.",
+    keyHighlight: "Scalable, user-centric solutions at affordable prices.",
     icon: Code,
-    position: "center",
+    cta: { text: "Learn More", link: "/services/custom-software" },
   },
   {
-    id: "app-dev",
-    title: "App Development",
-    description: "Transform ideas into powerful mobile experiences with seamless functionality and beautiful design.",
-    icon: Smartphone,
-    position: "top-right",
-  },
-  {
-    id: "designing",
-    title: "Designing",
-    description: "Bring your vision to life with creative, research-driven designs that captivate and inspire.",
-    icon: Monitor,
-    position: "bottom-left",
-  },
-  {
-    id: "marketing",
-    title: "Marketing",
+    id: "ai-ml",
+    title: "AI & Machine Learning Solutions",
     description:
-      "Accelerate growth with data-driven marketing strategies that attract, engage, and convert your audience.",
-    icon: Megaphone,
-    position: "bottom-center",
+      "Leverage AI to create intelligent systems for predictive analytics, automation, and personalized experiences.",
+    keyHighlight: "Cutting-edge AI for smarter business decisions.",
+    icon: BrainCircuit,
+    cta: { text: "Explore AI Solutions", link: "/services/ai-ml" },
   },
   {
-    id: "ai",
-    title: "A.I.",
-    description: "Empower your business with intelligent automation and AI solutions for smarter decision-making.",
-    icon: Cpu,
-    position: "bottom-right",
+    id: "automation",
+    title: "Business Process Automation",
+    description:
+      "Streamline operations with custom automation solutions to boost efficiency and reduce costs.",
+    keyHighlight: "Affordable automation for seamless workflows.",
+    icon: Workflow,
+    cta: { text: "Automate Now", link: "/services/automation" },
+  },
+  {
+    id: "cloud",
+    title: "Cloud Solutions",
+    description:
+      "Deploy scalable, secure cloud-based applications and infrastructure for flexibility and growth.",
+    keyHighlight: "Cost-effective, scalable cloud technology.",
+    icon: Cloud,
+    cta: { text: "Go Cloud", link: "/services/cloud" },
   },
 ]
 
+
 export default function ServicesGrid() {
   return (
-    <section className="py-16 px-6 ">
+    <section className="py-16 px-6 bg-[#31312F]">
       <div className="max-w-6xl mx-auto">
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {/* Top Row */}
-          <div className="md:col-span-1">
-            <ServiceCard title={services[0].title} description={services[0].description} icon={services[0].icon} />
-          </div>
-
-          <div className="md:col-span-1">
-            <ServiceCard
-              title={services[1].title}
-              description={services[1].description}
-              icon={services[1].icon}
-            />
-          </div>
-
-          <div className="md:col-span-1">
-            <ServiceCard title={services[2].title} description={services[2].description} icon={services[2].icon} />
-          </div>
-
-          {/* Bottom Row */}
-          <div className="md:col-span-1">
-            <ServiceCard title={services[3].title} description={services[3].description} icon={services[3].icon} />
-          </div>
-
-          <div className="md:col-span-1">
-            <ServiceCard title={services[4].title} description={services[4].description} icon={services[4].icon} />
-          </div>
-
-          <div className="md:col-span-1">
-            <ServiceCard title={services[5].title} description={services[5].description} icon={services[5].icon} />
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className="bg-[#23222a] rounded-2xl p-6 flex flex-col items-start shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <div className="mb-4">
+                <service.icon className="w-10 h-10 text-[grey]" />
+              </div>
+              <h3 className="text-[#f5f5f5] font-bold text-xl mb-2 font-sans">
+                {service.title}
+              </h3>
+              <p className="text-[#C8C8C8] text-base mb-2 text-left">
+                {service.description}
+              </p>
+              <div className="text-[grey] italic text-sm mb-4 font-semibold">
+                {service.keyHighlight}
+              </div>
+              <a
+                href={service.cta.link}
+                className="cursor-pointer px-4 py-2 text-[#31312F] bg-[#FF3F33] border border-[#FF3F33] rounded-full hover:bg-[#31312F] hover:border-[#F5F5F5] hover:text-[#F5F5F5] transition"
+              >
+                {service.cta.text}
+              </a>
+            </div>
+          ))}
         </div>
-
-        {/* Show More Button */}
-        {/* <div className="text-center">
-          <Button
-            variant="outline"
-            className="border-purple-500 text-purple-500 hover:bg-purple-50 px-8 py-3 bg-transparent"
-          >
-            Show more
-            <ChevronDown className="ml-2 w-4 h-4" />
-          </Button>
-        </div> */}
       </div>
     </section>
   )
