@@ -1,6 +1,7 @@
 "use client";
 
 import { gsap } from "gsap";
+import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ServicesGrid from "../components/custom/ServicesGrid"
 // import { useEffect } from 'react';
@@ -60,7 +61,7 @@ export default function HomePage() {
         </div>
         {/* Right Column: Visual */}
         <div className="w-full lg:w-1/2 flex justify-center items-center relative mt-10 lg:mt-0">
-          <img src="/images/Logo1.png" alt="NexaWorks Logo" className="w-64 h-64 sm:w-80 sm:h-80 object-contain rounded-2xl shadow-2xl transition-transform duration-700 hover:scale-105" />
+          <Image src="/images/Logo1.png" alt="NexaWorks Logo" width={320} height={320} className="w-64 h-64 sm:w-80 sm:h-80 object-contain rounded-2xl shadow-2xl transition-transform duration-700 hover:scale-105" />
         </div>
       </div>
     </section>
