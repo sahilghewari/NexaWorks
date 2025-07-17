@@ -1,20 +1,21 @@
 import { Linkedin, Instagram } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
 
   return (
     <footer className="bg-[#31312F] border-t-4 border-[#f5f5f5] px-6 pt-12 pb-4 text-[#C8C8C8]">
-      <div className="max-w-7xl mx-auto flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+      <div className="max-w-7xl mx-auto flex flex-col gap-8 md:flex-row md:items-start md:justify-between w-full">
         {/* Left Section: Logo & Tagline */}
-        <div className="flex flex-col items-center md:items-start md:w-1/3 mb-6 md:mb-0">
+        <div className="flex flex-col items-center md:items-start w-full md:w-1/3 mb-6 md:mb-0">
           <a href="/" className="mb-2">
-            <img src="/images/Logo.png" alt="NexaWorks Logo" className="w-[110px] h-auto" />
+            <Image src="/images/Logo.png" alt="NexaWorks Logo" width={110} height={40} className="h-auto" />
           </a>
-          <span className="text-[#F5f5f5 text-sm italic font-light">Exceptional Software. Affordable Prices.</span>
+          <span className="text-[#F5F5F5] text-sm italic font-light">Exceptional Software. Affordable Prices.</span>
         </div>
 
         {/* Center Section: Navigation & Legal */}
-        <div className="flex flex-col items-center md:items-center md:w-2/5">
+        <div className="flex flex-col items-center md:items-center w-full md:w-2/5">
           <div className="flex flex-row gap-8 mb-2 flex-wrap justify-center">
             <a href="/" className="hover:text-[#9c7bfd] font-semibold">Home</a>
             <a href="/services" className="hover:text-[#9c7bfd] font-semibold">Services</a>
@@ -28,7 +29,7 @@ export default function Footer() {
         </div>
 
         {/* Right Section: Contact & Social */}
-        <div className="flex flex-col items-center md:items-end md:w-1/3 gap-2">
+        <div className="flex flex-col items-center md:items-end w-full md:w-1/3 gap-2">
           <a href="mailto:contact@nexaworks.com" className="text-[#F5f5f5] text-sm hover:text-[#9c7bfd]">contact@nexaworks.com</a>
           {/* Optional phone number */}
           {/* <span className="text-sm">+1-800-NEXAWORKS</span> */}
@@ -47,11 +48,11 @@ export default function Footer() {
         </div>
       </div>
       {/* Bottom Bar */}
-      <div className="flex flex-col md:flex-row items-center justify-between mt-8 pt-4 border-t border-[#23222a] text-xs">
+      <div className="flex flex-col md:flex-row items-center justify-between mt-8 pt-4 border-t border-[#23222a] text-xs w-full">
         <span className="text-[#C8C8C8]">© 2025 NexaWorks.</span>
         <span className="text-[#C8C8C8] flex items-center gap-2 mt-2 md:mt-0">
           {/* Trust signals: Example AWS and Python logos, or text */}
-          <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="AWS" className="h-4 w-auto" />
+          <Image src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="AWS" width={40} height={16} className="h-4 w-auto" />
           <span className="text-[#F5f5f5]">Built by Top Talent</span>
         </span>
       </div>

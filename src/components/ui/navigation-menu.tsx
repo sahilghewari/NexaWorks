@@ -156,13 +156,5 @@ function NavigationMenuIndicator({
 }
 
 export {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuContent,
-  NavigationMenuTrigger,
-  NavigationMenuLink,
-  NavigationMenuIndicator,
-  NavigationMenuViewport,
-  navigationMenuTriggerStyle,
+  // Export only what is used elsewhere in the project
 }

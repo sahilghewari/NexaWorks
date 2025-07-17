@@ -6,14 +6,7 @@ import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { gsap } from "gsap"
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-} from "@/components/ui/navigation-menu"
+
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -181,27 +174,38 @@ export default function Navigation() {
     //     )}
     //   </div>
     // </nav>
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-3 bg-blur backdrop-blur-md  border-b border-white/20 shadow-sm">
-            {/* Logo on the left */}
-            <div className="flex items-center">
-              <img
-                src="https://i.postimg.cc/y6mgZBHc/Logo.png"
-                alt="Website Logo"
-                className="h-7 w-auto"
-              />
-              <span className="text-[#F5F5F5] ml-3 text-3xl font-bold">
-                NEXAWORKS
-              </span>
-            </div>
-            {/* Buttons on the right */}
-            <div className="flex space-x-4">
-              <button className="cursor-pointer px-4 py-2 text-[#31312F] bg-[#FF3F33] border border-[#FF3F33] rounded-full hover:bg-[#31312F] hover:border-[#F5F5F5] hover:text-[#F5F5F5] transition">
-                Services
-              </button>
-              <button className="cursor-pointer text-[#F5F5F5] px-6 py-2 bg-transparent border border-[#F5F5F5] rounded-full hover:bg-white hover:text-[#31312F] transition">
-                Works
-              </button>
-            </div>
-          </nav>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#31312F] backdrop-blur-md border-b border-white/20 shadow-sm px-4 py-2">
+      <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src="https://i.postimg.cc/y6mgZBHc/Logo.png" alt="Website Logo" className="h-7 w-auto" />
+          <span className="text-[#F5F5F5] ml-3 text-2xl md:text-3xl font-bold">NEXAWORKS</span>
+        </div>
+        {/* Desktop Nav */}
+        <div className="hidden md:flex space-x-6">
+          <Link href="/" className="text-[#F5F5F5] hover:text-[#9c7bfd] font-semibold">Home</Link>
+          <Link href="/services" className="text-[#F5F5F5] hover:text-[#9c7bfd] font-semibold">Services</Link>
+          <Link href="/about" className="text-[#F5F5F5] hover:text-[#9c7bfd] font-semibold">About</Link>
+          <Link href="/contact" className="text-[#F5F5F5] hover:text-[#9c7bfd] font-semibold">Contact</Link>
+        </div>
+        {/* Mobile menu button */}
+        <div className="md:hidden flex items-center">
+          <button onClick={toggleMenu} className="text-[#F5F5F5] focus:outline-none">
+            {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+          </button>
+        </div>
+      </div>
+      {/* Mobile Nav */}
+      {isOpen && (
+        <div className="md:hidden mt-2">
+          <div className="flex flex-col gap-2 bg-[#23222a] rounded-lg shadow-lg p-4">
+            <Link href="/" className="text-[#F5F5F5] hover:text-[#9c7bfd] font-semibold py-2 px-3 rounded" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link href="/services" className="text-[#F5F5F5] hover:text-[#9c7bfd] font-semibold py-2 px-3 rounded" onClick={() => setIsOpen(false)}>Services</Link>
+            <Link href="/about" className="text-[#F5F5F5] hover:text-[#9c7bfd] font-semibold py-2 px-3 rounded" onClick={() => setIsOpen(false)}>About</Link>
+            <Link href="/contact" className="text-[#F5F5F5] hover:text-[#9c7bfd] font-semibold py-2 px-3 rounded" onClick={() => setIsOpen(false)}>Contact</Link>
+          </div>
+        </div>
+      )}
+    </nav>
   )
 }
