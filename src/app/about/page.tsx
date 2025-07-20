@@ -3,9 +3,7 @@
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import { Coffee, Heart, Music, Camera } from "lucide-react"
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -232,19 +230,7 @@ export default function AboutPage() {
       </section>
 
       {/* Trusted By / Worked With */}
-      <section className="max-w-4xl mx-auto py-12 px-4 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">Trusted By</h2>
-        <div className="flex flex-wrap gap-6 justify-center items-center">
-          {/* Example logos, replace src with your own */}
-          <img src="/logos/startup.svg" alt="Startup" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
-          <img src="/logos/fintech.svg" alt="FinTech" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
-          <img src="/logos/healthtech.svg" alt="HealthTech" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
-          <img src="/logos/edtech.svg" alt="EdTech" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
-          <img src="/logos/b2bsaas.svg" alt="B2B SaaS" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
-          <img src="/logos/sme.svg" alt="SME Automation" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
-        </div>
-        <p className="mt-4 text-gray-400 text-base">We proudly serve early-stage companies across India and beyond.</p>
-      </section>
+      
 
       {/* Call to Action */}
       <section className="w-full py-16 px-4 bg-[#111] rounded-2xl shadow-lg text-center mt-16">
