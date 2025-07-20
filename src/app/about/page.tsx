@@ -70,119 +70,188 @@ export default function AboutPage() {
     return () => ctx.revert()
   }, [])
 
-  const skills = [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "Tailwind CSS",
-    "Python",
-    "Git",
-    "Figma",
-  ]
-
   return (
-    <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="about-section text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold bg-[#9c7bfd] bg-clip-text text-transparent mb-6">
-            About Us
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Passionate developers dedicated to building impactful digital solutions
-          </p>
+    <div ref={containerRef} className="min-h-screen font-inter bg-gradient-to-br from-[#18181b] via-[#222226] to-[#2a2a2e] py-0 px-0">
+      {/* Hero Section */}
+      <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 bg-gradient-to-br from-[#111] to-[#222]">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#111]/90 to-[#222]/90 z-0 animate-gradient-move"></div>
+        <div className="relative z-10 max-w-2xl mx-auto">
+          <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6 tracking-tight animate-slide-in">We build the future, one MVP at a time.</h1>
+          <p className="text-base sm:text-xl text-gray-400 mb-8 animate-fade-in">Helping startups launch, scale, and automate with confidence.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#work" className="inline-block bg-white text-[#111] px-8 py-3 rounded-full font-semibold shadow hover:bg-[#00BFA6] hover:text-white transition-all duration-300">View Our Work</a>
+            <a href="#contact" className="inline-block bg-[#222] text-white px-8 py-3 rounded-full font-semibold shadow hover:bg-[#00BFA6] transition-all duration-300">Talk to Us</a>
+          </div>
         </div>
+      </section>
 
-        {/* Story Section */}
-        <div className="about-section mb-16">
-          <Card className="bg-white/70 backdrop-blur-sm border-white/20 shadow-lg">
-            <CardContent className="p-8">
-              <h2 className="text-3xl font-bold mb-6 text-[#9c7bfd]">Our Story</h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
-                  👋 Welcome to NexaWorks.tech! We are a passionate team of developers, designers, and digital strategists based in India, dedicated to building impactful digital solutions for businesses and brands worldwide.
-                </p>
-                <p>
-                  Our journey began with a shared curiosity for technology and a drive to solve real-world problems through innovation. Over the years, we have grown into a full-service digital agency, specializing in modern web and mobile app development, creative design, marketing, and more.
-                </p>
-                <p>
-                  We believe in crafting seamless user experiences, robust backend systems, and visually stunning interfaces using the latest technologies like React, Next.js, Node.js, and React Native. Our expertise also extends to cloud integrations, database management, and scalable API development.
-                </p>
-                <p>
-                  At NexaWorks.tech, we are more than just a tech company—we are your digital partners. Whether you are a startup, SME, or enterprise, we work closely with you to understand your vision and deliver solutions that drive growth and success.
-                </p>
-                <p>
-                  Let us help you turn your ideas into reality. Together, we build the future—one project at a time.
-                </p>
+      {/* Mission & Philosophy */}
+      <section className="max-w-5xl mx-auto py-16 px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-[#1a1a1a] rounded-2xl shadow-lg border border-gray-800">
+        <div className="flex flex-col items-start">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Mission</h2>
+          <span className="text-lg text-gray-400 font-medium mb-4 border-l-4 border-[#00BFA6] pl-4">“Build lean. Deliver fast. Automate always.”</span>
+        </div>
+        <div className="border-l border-gray-600 pl-8">
+          <p className="text-base sm:text-lg text-gray-300 mb-2">NexaWorks helps early-stage companies build, launch, and scale with world-class software and automation. We believe in lean teams, rapid delivery, and empowering founders globally.</p>
+          <div className="h-1 w-16 bg-[#00BFA6] rounded-full mt-4 animate-bar"></div>
+        </div>
+      </section>
+
+      {/* The NexaWorks Edge */}
+      <section className="max-w-6xl mx-auto py-16 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="bg-[#2a2a2e] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
+          <span className="text-4xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></span>
+          <h4 className="font-bold text-white mb-2">MVP-first Thinking</h4>
+          <p className="text-gray-400 text-sm">We specialize in lean, fast MVPs so founders can validate and grow.</p>
+        </div>
+        <div className="bg-[#2a2a2e] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
+          <span className="text-4xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/></svg></span>
+          <h4 className="font-bold text-white mb-2">Automation DNA</h4>
+          <p className="text-gray-400 text-sm">Every solution is built with automated workflows and scale in mind.</p>
+        </div>
+        <div className="bg-[#2a2a2e] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
+          <span className="text-4xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></span>
+          <h4 className="font-bold text-white mb-2">Talent Incubator</h4>
+          <p className="text-gray-400 text-sm">We train our interns on real-world products before deploying them on client work.</p>
+        </div>
+        <div className="bg-[#2a2a2e] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
+          <span className="text-4xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M2 12a10 10 0 0020 0"/></svg></span>
+          <h4 className="font-bold text-white mb-2">Global Vision</h4>
+          <p className="text-gray-400 text-sm">While rooted in India, we build for global users, markets, and scalability.</p>
+        </div>
+      </section>
+
+      {/* Story / Timeline */}
+      <section className="max-w-3xl mx-auto py-16 px-4 flex flex-col items-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10">Our Story</h2>
+        <div className="relative w-full flex flex-col items-center">
+          <div className="absolute left-1/2 top-0 h-full w-1 bg-gray-700 -translate-x-1/2"></div>
+          <div className="space-y-12 w-full">
+            {/* Timeline entries */}
+            <div className="flex items-center w-full animate-timeline-entry">
+              <div className="w-1/2 text-right pr-8">
+                <div className="inline-block bg-[#222] text-white px-4 py-2 rounded-xl shadow">2025: Founded in Mumbai</div>
               </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Skills Section */}
-        <div className="about-section skills-section mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#9c7bfd]">Skills & Technologies</h2>
-          <div className="flex flex-wrap gap-3 justify-center">
-            {skills.map((skill) => (
-              <Badge
-                key={skill}
-                className="skill-badge bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 text-sm font-medium hover:shadow-lg transition-shadow duration-300"
-              >
-                {skill}
-              </Badge>
-            ))}
+              <div className="relative w-8 h-8 flex items-center justify-center">
+                <span className="block w-4 h-4 rounded-full bg-[#00BFA6] shadow-lg animate-glow"></span>
+              </div>
+              <div className="w-1/2 pl-8"></div>
+            </div>
+            <div className="flex items-center w-full animate-timeline-entry">
+              <div className="w-1/2 text-right pr-8"></div>
+              <div className="relative w-8 h-8 flex items-center justify-center">
+                <span className="block w-4 h-4 rounded-full bg-[#00BFA6] shadow-lg animate-glow"></span>
+              </div>
+              <div className="w-1/2 pl-8">
+                <div className="inline-block bg-[#222] text-white px-4 py-2 rounded-xl shadow">Launched in-house product incubation program</div>
+              </div>
+            </div>
+            <div className="flex items-center w-full animate-timeline-entry">
+              <div className="w-1/2 text-right pr-8">
+                <div className="inline-block bg-[#222] text-white px-4 py-2 rounded-xl shadow">First 2 clients</div>
+              </div>
+              <div className="relative w-8 h-8 flex items-center justify-center">
+                <span className="block w-4 h-4 rounded-full bg-[#00BFA6] shadow-lg animate-glow"></span>
+              </div>
+              <div className="w-1/2 pl-8"></div>
+            </div>
+            <div className="flex items-center w-full animate-timeline-entry">
+              <div className="w-1/2 text-right pr-8"></div>
+              <div className="relative w-8 h-8 flex items-center justify-center">
+                <span className="block w-4 h-4 rounded-full bg-[#00BFA6] shadow-lg animate-glow"></span>
+              </div>
+              <div className="w-1/2 pl-8">
+                <div className="inline-block bg-[#222] text-white px-4 py-2 rounded-xl shadow">Grew to 15+ members</div>
+              </div>
+            </div>
+            <div className="flex items-center w-full animate-timeline-entry">
+              <div className="w-1/2 text-right pr-8">
+                <div className="inline-block bg-[#222] text-white px-4 py-2 rounded-xl shadow">Mission:Automate 50+ business workflows by 2026.</div>
+              </div>
+              <div className="relative w-8 h-8 flex items-center justify-center">
+                <span className="block w-4 h-4 rounded-full bg-[#00BFA6] shadow-lg animate-glow"></span>
+              </div>
+              <div className="w-1/2 pl-8"></div>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Interests Section */}
-        <div className="about-section interests-section">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#9c7bfd]">Our Interests</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="interest-card bg-white/70 backdrop-blur-sm border-white/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Coffee className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="font-semibold text-[#9c7bfd] mb-2">Coffee</h3>
-                <p className="text-sm text-gray-600">Balancing caffeine levels and clean code</p>
-              </CardContent>
-            </Card>
-
-            <Card className="interest-card bg-white/70 backdrop-blur-sm border-white/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="font-semibold text-[#9c7bfd] mb-2">Fitness</h3>
-                <p className="text-sm text-gray-600">At gym with my buddy shaping our body along with our future</p>
-              </CardContent>
-            </Card>
-
-            <Card className="interest-card bg-white/70 backdrop-blur-sm border-white/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Music className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="font-semibold text-[#9c7bfd] mb-2">Music</h3>
-                <p className="text-sm text-gray-600">Playing guitar and discovering new artists across all genres</p>
-              </CardContent>
-            </Card>
-
-            <Card className="interest-card bg-white/70 backdrop-blur-sm border-white/20 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Camera className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="font-semibold text-[#9c7bfd] mb-2">Photography</h3>
-                <p className="text-sm text-gray-600">Capturing urban landscapes and candid street moments</p>
-              </CardContent>
-            </Card>
+      {/* Meet the Team */}
+      <section className="max-w-6xl mx-auto py-16 px-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center">Meet the Team</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {/* Example team member card, add images as needed */}
+          <div className="bg-[#222] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-[#333] group">
+            <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-700 mb-4 flex items-center justify-center grayscale group-hover:scale-105 transition-all duration-300">
+              {/* <img src="/path/to/photo.jpg" alt="Sahil Ghewari" className="w-full h-full object-cover" /> */}
+              <span className="text-5xl text-white">👨‍💻</span>
+            </div>
+            <h4 className="font-bold text-white mb-1">Sahil Ghewari</h4>
+            <p className="text-gray-400 text-sm mb-2">Co-Founder & Product Lead</p>
+          </div>
+          <div className="bg-[#222] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-[#333] group">
+            <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-700 mb-4 flex items-center justify-center grayscale group-hover:scale-105 transition-all duration-300">
+              <span className="text-5xl text-white">👩‍🎓</span>
+            </div>
+            <h4 className="font-bold text-white mb-1">Pavan Babar</h4>
+            <p className="text-gray-400 text-sm mb-2">Co-Founder & Tech Lead</p>
+          </div>
+          <div className="bg-[#222] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-[#333] group">
+            <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-700 mb-4 flex items-center justify-center grayscale group-hover:scale-105 transition-all duration-300">
+              <span className="text-5xl text-white">👨‍🔬</span>
+            </div>
+            <h4 className="font-bold text-white mb-1">Mangala Sawant</h4>
+            <p className="text-gray-400 text-sm mb-2">Co-Founder & Operations Lead </p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Our Values */}
+      <section className="max-w-6xl mx-auto py-16 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="backdrop-blur-sm bg-white/10 border border-gray-700 rounded-2xl p-8 flex flex-col items-center text-center">
+          <span className="text-3xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/></svg></span>
+          <h4 className="font-bold text-white mb-2">Transparency</h4>
+          <p className="text-gray-400 text-sm">We share how we work, what we charge, and what you get.</p>
+        </div>
+        <div className="backdrop-blur-sm bg-white/10 border border-gray-700 rounded-2xl p-8 flex flex-col items-center text-center">
+          <span className="text-3xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></span>
+          <h4 className="font-bold text-white mb-2">Execution</h4>
+          <p className="text-gray-400 text-sm">We get things done—fast, clean, and production-ready.</p>
+        </div>
+        <div className="backdrop-blur-sm bg-white/10 border border-gray-700 rounded-2xl p-8 flex flex-col items-center text-center">
+          <span className="text-3xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></span>
+          <h4 className="font-bold text-white mb-2">Innovation</h4>
+          <p className="text-gray-400 text-sm">We stay ahead with AI, automation, and product thinking.</p>
+        </div>
+        <div className="backdrop-blur-sm bg-white/10 border border-gray-700 rounded-2xl p-8 flex flex-col items-center text-center">
+          <span className="text-3xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M2 12a10 10 0 0020 0"/></svg></span>
+          <h4 className="font-bold text-white mb-2">Collaboration</h4>
+          <p className="text-gray-400 text-sm">We build long-term relationships, not just apps.</p>
+        </div>
+      </section>
+
+      {/* Trusted By / Worked With */}
+      <section className="max-w-4xl mx-auto py-12 px-4 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">Trusted By</h2>
+        <div className="flex flex-wrap gap-6 justify-center items-center">
+          {/* Example logos, replace src with your own */}
+          <img src="/logos/startup.svg" alt="Startup" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
+          <img src="/logos/fintech.svg" alt="FinTech" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
+          <img src="/logos/healthtech.svg" alt="HealthTech" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
+          <img src="/logos/edtech.svg" alt="EdTech" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
+          <img src="/logos/b2bsaas.svg" alt="B2B SaaS" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
+          <img src="/logos/sme.svg" alt="SME Automation" className="h-10 grayscale opacity-70 hover:opacity-100 transition" />
+        </div>
+        <p className="mt-4 text-gray-400 text-base">We proudly serve early-stage companies across India and beyond.</p>
+      </section>
+
+      {/* Call to Action */}
+      <section className="w-full py-16 px-4 bg-[#111] rounded-2xl shadow-lg text-center mt-16">
+        <h2 className="text-3xl font-bold text-white mb-4">Have a vision? Let’s make it real.</h2>
+        <p className="text-lg text-gray-400 mb-8">Reach out for MVPs, automations, or strategic tech builds.</p>
+        <a href="#contact" className="inline-block bg-[#00BFA6] text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-[#00BFA6]/40 transition-all duration-300">Start a Conversation</a>
+      </section>
     </div>
   )
 }
