@@ -89,35 +89,34 @@ export default function HomePage() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
+        className="min-h-[70vh] sm:min-h-screen flex flex-col justify-center items-center px-4 sm:px-8 md:px-16 relative overflow-hidden"
       >
         {/* Background decorations */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#C8C8C8] to-[#E4E4E4] rounded-full opacity-20 float"></div>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-24 -right-24 w-32 h-32 xs:w-40 xs:h-40 sm:w-80 sm:h-80 bg-gradient-to-br from-[#C8C8C8] to-[#E4E4E4] rounded-full opacity-20 float"></div>
           <div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-[#C8C8C8] to-[#F5F5F5] rounded-full opacity-20 float"
+            className="absolute -bottom-12 -left-12 w-24 h-24 xs:w-48 xs:h-48 sm:w-96 sm:h-96 bg-gradient-to-br from-[#C8C8C8] to-[#F5F5F5] rounded-full opacity-20 float"
             style={{ animationDelay: "1s" }}
           ></div>
           <div
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-[#E4E4E4] to-[#C8C8C8] rounded-full opacity-10 float"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 xs:w-32 xs:h-32 sm:w-64 sm:h-64 bg-gradient-to-br from-[#E4E4E4] to-[#C8C8C8] rounded-full opacity-10 float"
             style={{ animationDelay: "2s" }}
           ></div>
         </div>
 
-        <div className="text-center z-10 max-w-4xl mx-auto">
-          <h1 className="hero-title text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#fff] to-[#626262] bg-clip-text text-transparent mb-6">
+        <div className="text-center z-10 w-full max-w-xs xs:max-w-md sm:max-w-2xl md:max-w-4xl mx-auto px-2 sm:px-4">
+          <h1 className="hero-title text-3xl xs:text-4xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#fff] to-[#626262] bg-clip-text text-transparent mb-4 sm:mb-6">
             Welcome to NexaWorks
           </h1>
-          <p className="hero-subtitle text-xl md:text-2xl text-[#C8C8C8] mb-8 max-w-2xl mx-auto">
-            We provide complete digital solutions: Websites, Apps, Video
-            Editing, Designing, Marketing & more.
+          <p className="hero-subtitle text-sm xs:text-base sm:text-xl md:text-2xl text-[#C8C8C8] mb-6 sm:mb-8 max-w-xs xs:max-w-md sm:max-w-xl md:max-w-2xl mx-auto">
+            We provide complete digital solutions: Websites, Apps, Video Editing, Designing, Marketing & more.
           </p>
-          <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+          <div className="hero-cta flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center items-center w-full">
+            <Link href="/contact" className="w-full xs:w-auto">
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-[#31312f] text-[#31312f] hover:bg-[#E4E4E4] hover:border-[#C8C8C8] hover:text-[#31312f] px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 cursor-pointer"
+                className="w-full xs:w-auto border-2 border-[#31312f] text-[#31312f] hover:bg-[#E4E4E4] hover:border-[#C8C8C8] hover:text-[#31312f] px-4 xs:px-6 sm:px-8 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 cursor-pointer"
               >
                 Let&apos;s Talk
               </Button>
@@ -127,9 +126,9 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section ref={featuresRef} className="py-20 px-4 bg-[#F5F5F5]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-[#31312f] bg-clip-text text-transparent">
+      <section ref={featuresRef} className="py-12 sm:py-20 px-4 sm:px-6 md:px-8 bg-[#F5F5F5]">
+        <div className="max-w-xl sm:max-w-3xl md:max-w-6xl mx-auto">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-16 bg-[#31312f] bg-clip-text text-transparent">
             Our Services
           </h2>
           <ServicesGrid/>
@@ -138,7 +137,7 @@ export default function HomePage() {
 
       {/* <TestimonialsCarousel /> */}
 
-      <div className="container my-40 mx-auto px-4 py-8">
+      <div className="container my-16 sm:my-32 md:my-40 mx-auto px-4 sm:px-6 py-8">
         <HeroCTA />
       </div>
 
