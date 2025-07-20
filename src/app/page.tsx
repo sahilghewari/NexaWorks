@@ -4,9 +4,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight
-} from "lucide-react";
 import Link from "next/link";
 import HeroCTA from "@/components/custom/Hero-cta";
 import ContactSection from "@/components/custom/ContactSection";
