@@ -19,8 +19,8 @@ export default function StickyCards() {
 
   useEffect(() => {
     if (!containerRef.current) return;
-    let dfCardsTL = gsap.timeline();
-    let dfCards = cardRefs.current;
+    const dfCardsTL = gsap.timeline();
+    const dfCards = cardRefs.current;
     gsap.set(dfCards, { position: "absolute" });
 
     ScrollTrigger.create({
