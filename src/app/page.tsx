@@ -86,7 +86,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="min-h-[70vh] sm:min-h-screen flex flex-col justify-center items-center px-4 sm:px-8 md:px-16 relative overflow-hidden"
+        className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-8 md:px-8 relative overflow-hidden"
       >
         {/* Background decorations */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -102,18 +102,18 @@ export default function HomePage() {
         </div>
 
         <div className="text-center z-10 w-full max-w-xs xs:max-w-md sm:max-w-2xl md:max-w-4xl mx-auto px-2 sm:px-4">
-          <h1 className="hero-title text-3xl xs:text-4xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#fff] to-[#626262] bg-clip-text text-transparent mb-4 sm:mb-6">
+          <h1 className="hero-title text-5xl xs:text-4xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-r from-[#fff] to-[#626262] bg-clip-text text-transparent mb-4 sm:mb-6">
             Welcome to NexaWorks
           </h1>
-          <p className="hero-subtitle text-sm xs:text-base sm:text-xl md:text-2xl text-[#C8C8C8] mb-6 sm:mb-8 max-w-xs xs:max-w-md sm:max-w-xl md:max-w-2xl mx-auto">
-            We provide complete digital solutions: Websites, Apps, Video Editing, Designing, Marketing & more.
+          <p className="hero-subtitle text-lg xs:text-base sm:text-xl md:text-2xl text-[#C8C8C8] mb-6 sm:mb-8 max-w-xs xs:max-w-md sm:max-w-xl md:max-w-2xl mx-auto">
+            Let automation do the heavy lifting
           </p>
           <div className="hero-cta flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center items-center w-full">
             <Link href="/contact" className="w-full xs:w-auto">
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full xs:w-auto border-2 border-[#31312f] text-[#31312f] hover:bg-[#E4E4E4] hover:border-[#C8C8C8] hover:text-[#31312f] px-4 xs:px-6 sm:px-8 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 cursor-pointer"
+                className="w-36 xs:w-auto border-2 border-[#31312f] text-[#31312f] hover:bg-[#E4E4E4] hover:border-[#C8C8C8] hover:text-[#31312f] px-4 xs:px-6 sm:px-8 py-2 sm:py-3 rounded-full text-base sm:text-lg font-semibold transition-all duration-300 cursor-pointer"
               >
                 Let&apos;s Talk
               </Button>
