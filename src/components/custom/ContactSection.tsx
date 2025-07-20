@@ -6,7 +6,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { CircleCheckBig, Mail, Phone } from "lucide-react"
+import { CircleCheckBig, Mail } from "lucide-react"
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({

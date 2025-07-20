@@ -1,6 +1,5 @@
-import { Lightbulb, Code, Smartphone, Monitor, Cpu, Megaphone, ChevronDown } from "lucide-react"
+import { Lightbulb, Cpu, Megaphone } from "lucide-react"
 import ServiceCard from "./ServiceCard"
-import { Button } from "@/components/ui/button"
 
 const services = [
   {
