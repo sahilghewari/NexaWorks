@@ -9,7 +9,7 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ quote, name, title, avatar }: TestimonialCardProps) {
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-sm mx-auto h-full flex flex-col">
+    <div className="bg-[#F5F5F5] rounded-2xl p-8 shadow-lg border border-[#E4E4E4] max-w-sm mx-auto h-full flex flex-col">
       <div className="flex-1">
         <div className="flex justify-center mb-6">
           <div className="w-20 h-20 rounded-full overflow-hidden">
@@ -23,12 +23,12 @@ export default function TestimonialCard({ quote, name, title, avatar }: Testimon
           </div>
         </div>
 
-        <blockquote className="text-gray-700 text-center mb-8 leading-relaxed">&quot;{quote}&quot;</blockquote>
+        <blockquote className="text-[#31312f] text-center mb-8 leading-relaxed">&quot;{quote}&quot;</blockquote>
       </div>
 
       <div className="text-center">
-        <h4 className="font-semibold text-gray-900 text-lg">{name}</h4>
-        <p className="text-gray-500 text-sm mt-1">{title}</p>
+        <h4 className="font-semibold text-[#31312f] text-lg">{name}</h4>
+        <p className="text-[#C8C8C8] text-sm mt-1">{title}</p>
       </div>
     </div>
   )

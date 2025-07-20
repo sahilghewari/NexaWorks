@@ -27,8 +27,8 @@ export default function HeroCTA() {
   };
 
   return (
-    <section className="bg-[#C8B6FF] rounded-2xl px-8 py-16 md:py-20 text-center">
-      <h1 className="text-purple-800 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-4xl mx-auto mb-12">
+    <section className="bg-[#F5F5F5] rounded-2xl px-8 py-16 md:py-20 text-center">
+      <h1 className="text-[#31312f] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-4xl mx-auto mb-12">
         Join 10+ growing businesses that prefer NexaWorks to build their
         brands.
       </h1>
@@ -36,12 +36,12 @@ export default function HeroCTA() {
         <DialogTrigger asChild>
           <Button
             size="lg"
-            className="cursor-pointer bg-white text-gray-800 hover:bg-gray-100 px-8 py-3 text-lg font-medium rounded-lg"
+            className="cursor-pointer bg-[#31312f] text-[#F5F5F5] hover:bg-[#C8C8C8] hover:text-[#31312f] px-8 py-3 text-lg font-medium rounded-lg"
           >
             Request a Quote
           </Button>
         </DialogTrigger>
-        <DialogContent className="w-[450px] p-0">
+        <DialogContent className="w-[450px] p-0 bg-[#E4E4E4]">
           <div className="">
             {submitted ? (
               <div className="text-center p-4">
@@ -56,7 +56,7 @@ export default function HeroCTA() {
             ) : (
               <div>
                 <div className="">
-                  <div className="bg-[#B8C0FF] text-purple-800 p-3 text-center rounded-t-lg text-sm font-medium px-20">
+                  <div className="bg-[#C8C8C8] text-[#31312f] p-3 text-center rounded-t-lg text-sm font-medium px-20">
                     GET IN TOUCH WITH OUR EXPERTS TO TURN YOUR IDEA INTO
                     REALITY.
                   </div>
@@ -68,7 +68,7 @@ export default function HeroCTA() {
                     placeholder="Your Name"
                     value={form.name}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 rounded px-3 py-2"
+                    className="w-full border border-[#E4E4E4] rounded px-3 py-2 bg-[#F5F5F5] text-[#31312f]"
                     required
                   />
                   <input
@@ -77,7 +77,7 @@ export default function HeroCTA() {
                     placeholder="Email"
                     value={form.email}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 rounded px-3 py-2"
+                    className="w-full border border-[#E4E4E4] rounded px-3 py-2 bg-[#F5F5F5] text-[#31312f]"
                     required
                   />
                   <input
@@ -86,7 +86,7 @@ export default function HeroCTA() {
                     placeholder="Phone Number"
                     value={form.phone}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 rounded px-3 py-2"
+                    className="w-full border border-[#E4E4E4] rounded px-3 py-2 bg-[#F5F5F5] text-[#31312f]"
                     required
                   />
                   <textarea
@@ -94,12 +94,12 @@ export default function HeroCTA() {
                     placeholder="Message"
                     value={form.message}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 rounded px-3 py-2 min-h-[80px]"
+                    className="w-full border border-[#E4E4E4] rounded px-3 py-2 min-h-[80px] bg-[#F5F5F5] text-[#31312f]"
                     required
                   />
                   <Button
                     type="submit"
-                    className="w-36 bg-[#B8C0FF] hover:bg-[#C8B6FF] text-purple-800 py-6 mt-20 text-lg font-medium cursor-pointer"
+                    className="w-36 bg-[#31312f] hover:bg-[#C8C8C8] text-[#F5F5F5] py-6 mt-20 text-lg font-medium cursor-pointer"
                   >
                     Submit
                   </Button>

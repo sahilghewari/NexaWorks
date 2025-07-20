@@ -1,2 +1,15 @@
 text 9c7bfd main(text-purple-800)
 FFD6FF, E7C6FF, main(C8B6FF, 9c7bfd), B8C0FF, BBD0FF
+
+v2 design
+
+text 9c7bfd main(text-purple-800)
+FFD6FF, E7C6FF, main(C8B6FF, 9c7bfd), B8C0FF, BBD0FF
+
+v2 design
+#31312f
+#424242ff
+#F5F5F5
+#E4E4E4
+
+#C8C8C8

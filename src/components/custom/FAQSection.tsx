@@ -82,12 +82,12 @@ export default function FAQSection({
   }
 
   return (
-    <section className="py-16 px-6 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-16 px-6 bg-gradient-to-br from-[#F5F5F5] to-[#E4E4E4]">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{title}</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#31312f] mb-4">{title}</h2>
+          <p className="text-xl text-[#31312f]/70 max-w-2xl mx-auto">{subtitle}</p>
         </div>
 
         {/* FAQ Items */}
@@ -112,17 +112,17 @@ export default function FAQSection({
 
         {/* Contact CTA */}
         <div className="mt-12 text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Still have questions?</h3>
-            <p className="text-gray-600 mb-6">
+          <div className="bg-[#F5F5F5] rounded-2xl p-8 shadow-lg border border-[#E4E4E4]">
+            <h3 className="text-2xl font-semibold text-[#31312f] mb-4">Still have questions?</h3>
+            <p className="text-[#31312f]/70 mb-6">
               Can&lsquo;t find the answer you&lsquo;re looking for? Our team is here to help you with any questions about our
               services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cursor-pointer bg-[#9c7bfd] hover:bg-[#9374ef] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200">
+              <button className="cursor-pointer bg-[#31312f] hover:bg-[#44443f] text-[#F5F5F5] px-8 py-3 rounded-lg font-medium transition-colors duration-200">
                 Contact Support
               </button>
-              <button className="cursor-pointer border border-[#9c7bfd] text-[#9c7bfd] hover:bg-purple-50 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
+              <button className="cursor-pointer border border-[#31312f] text-[#31312f] hover:bg-[#E4E4E4] px-8 py-3 rounded-lg font-medium transition-colors duration-200">
                 Schedule a Call
               </button>
             </div>
