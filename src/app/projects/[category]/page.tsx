@@ -47,7 +47,6 @@ export default async function ProjectCategoryPage({
             {categoryObj.projects?.map((project) => (
               <div key={project.title} className="bg-white rounded-xl shadow border border-[#C8C8C8] flex flex-col items-center p-2 sm:p-4">
                 <div className="w-full aspect-[16/9] mb-3 sm:mb-4 overflow-hidden rounded-lg flex items-center justify-center bg-[#E4E4E4]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <Image
                     src={project.image}
                     alt={project.title}

@@ -78,10 +78,8 @@ export default function AboutPage() {
           <h1 className="text-4xl sm:text-6xl font-bold text-[#F5F5F5] mb-6 tracking-tight animate-slide-in">We build the future, one MVP at a time.</h1>
           <p className="text-base sm:text-xl text-[#C8C8C8] mb-8 animate-fade-in">Helping startups launch, scale, and automate with confidence.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" className="inline-block bg-[#31312f] text-[#F5F5F5] px-8 py-3 rounded-full font-semibold shadow hover:bg-[#C8C8C8] hover:text-[#31312f] transition-all duration-300">Talk to Us</a>
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
             <Link href="/projects/web-development" className="inline-block bg-[#F5F5F5] text-[#31312f] px-8 py-3 rounded-full font-semibold shadow hover:bg-[#C8C8C8] hover:text-[#31312f] transition-all duration-300">View Our Work</Link>
-            <a href="#contact" className="inline-block bg-[#31312f] text-[#F5F5F5] px-8 py-3 rounded-full font-semibold shadow hover:bg-[#C8C8C8] hover:text-[#31312f] transition-all duration-300">Talk to Us</a>
+            <a href="/contact" className="inline-block bg-[#31312f] text-[#F5F5F5] px-8 py-3 rounded-full font-semibold shadow hover:bg-[#C8C8C8] hover:text-[#31312f] transition-all duration-300">Talk to Us</a>
           </div>
         </div>
       </section>

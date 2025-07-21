@@ -33,7 +33,7 @@ export default function Navigation() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   // Mobile submenu state
@@ -79,7 +79,6 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="nav-item ">
             <div className="text-2xl font-bold text-[#F5F5F5] flex flex-row items-center gap-3">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <Image
                 src='https://i.postimg.cc/y6mgZBHc/Logo.png'
                 width={40}

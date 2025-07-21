@@ -4,26 +4,25 @@ import { Resend } from 'resend';
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, message } = await req.json();
-    console.log('Received contact form:', { name, email, message });
+    const { name, email, subject, message } = await req.json();
+    console.log('Received contact form:', { name, email, subject, message });
     if (!name || !email || !message) {
       console.log('Missing required fields');
       return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 });
     }
 
-
     // Use Resend API to send email
     const resend = new Resend(process.env.RESEND_API_KEY);
     const from = process.env.RESEND_FROM || 'no-reply@nexaworks.com';
     const to = process.env.CONTACT_RECEIVER || 'your@email.com';
-    const subject = `New Contact Form Submission from ${name}`;
-    const text = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const emailSubject = subject ? `Contact: ${subject}` : `New Contact Form Submission from ${name}`;
+    const text = `Name: ${name}\nEmail: ${email}\nSubject: ${subject || "(none)"}\nMessage: ${message}`;
 
-    console.log('Sending mail with Resend:', { from, to, subject, text });
+    console.log('Sending mail with Resend:', { from, to, subject: emailSubject, text });
     const data = await resend.emails.send({
       from,
       to,
-      subject,
+      subject: emailSubject,
       text,
       replyTo: email,
     });
