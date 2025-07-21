@@ -24,10 +24,34 @@ export default function ContactSection() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<null | 'success' | 'error'>(null)
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Handle form submission here
+    setLoading(true)
+    setStatus(null)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          message: formData.message,
+        }),
+      })
+      if (res.ok) {
+        setStatus('success')
+        setFormData({ fullName: '', email: '', phone: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const benefits = [
@@ -119,9 +143,16 @@ export default function ContactSection() {
             <Button
               type="submit"
               className="w-full bg-[#31312f] hover:bg-[#C8C8C8] text-[#F5F5F5] py-2 sm:py-3 text-base sm:text-lg font-medium cursor-pointer"
+              disabled={loading}
             >
-              Submit
+              {loading ? 'Sending...' : 'Submit'}
             </Button>
+            {status === 'success' && (
+              <div className="text-green-600 text-center font-semibold mt-2">Thank you! Your message has been sent.</div>
+            )}
+            {status === 'error' && (
+              <div className="text-red-600 text-center font-semibold mt-2">Sorry, something went wrong. Please try again.</div>
+            )}
           </form>
         </div>
       </div>
