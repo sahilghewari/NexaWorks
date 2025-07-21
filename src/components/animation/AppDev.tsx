@@ -5,6 +5,13 @@ import animationData from "@/assests/Animations/SocialMediaMarketing.json";
 
 export default function LottieSection() {
   return (
-    <Lottie animationData={animationData} loop={true} autoplay={true} style={{ width: 500, height: 500, marginTop:8,marginLeft:110 }}/>
+    <div className="w-full flex justify-center items-center">
+      <Lottie 
+        animationData={animationData} 
+        loop={true} 
+        autoplay={true} 
+        style={{ width: '100%', maxWidth: 400, height: 'auto', marginTop: 8 }}
+      />
+    </div>
   );
 }

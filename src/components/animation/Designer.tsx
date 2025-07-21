@@ -5,7 +5,14 @@ import animationData from "@/assests/Animations/Designer.json";
 
 export default function LottieSection() {
   return (
-    <Lottie animationData={animationData} loop={true} autoplay={true} style={{ width: 600, height: 600, marginTop:6,marginLeft:100 }}/>
+    <div className="w-full flex justify-center items-center">
+      <Lottie 
+        animationData={animationData} 
+        loop={true} 
+        autoplay={true} 
+        style={{ width: '100%', maxWidth: 400, height: 'auto', marginTop: 6 }}
+      />
+    </div>
   );
 }
  

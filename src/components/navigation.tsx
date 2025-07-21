@@ -33,7 +33,39 @@ export default function Navigation() {
     { name: "About Us", href: "/about" },
     { name: "Projects", href: "/projects" },
     { name: "Contact", href: "/#contact" },
-  ]
+  ];
+
+  // Mobile submenu state
+  const [showProjectsSub, setShowProjectsSub] = useState(false);
+  const mobileProjectCategories = [
+    {
+      label: "Web Development",
+      links: [
+        { name: "Website Development", href: "/projects/web-development" },
+      ],
+    },
+    {
+      label: "App Development",
+      links: [
+        { name: "Android/Ios App Development", href: "/projects/app-development" },
+      ],
+    },
+    {
+      label: "Design",
+      links: [
+        { name: "UI/UX Design", href: "/projects/design" },
+        { name: "User Interface Design", href: "/projects/design" },
+      ],
+    },
+    {
+      label: "QA and DevOps",
+      links: [
+        { name: "Manual Testing", href: "/projects/qa-and-devops" },
+        { name: "Pixel Perfect UI Testing", href: "/projects/qa-and-devops" },
+        { name: "DevOps Consulting", href: "/projects/qa-and-devops" },
+      ],
+    },
+  ];
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -213,20 +245,70 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-[#31312f]/95 backdrop-blur-md rounded-lg mt-2 shadow-lg">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`block px-3 py-2 rounded-lg text-base font-medium transition-all duration-300 ${
-                    pathname === item.href
-                      ? "bg-gradient-to-r from-[#31312f] to-[#C8C8C8] text-[#F5F5F5]"
-                      : "text-[#F5F5F5] hover:text-[#31312f] hover:bg-[#E4E4E4]"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                if (item.name !== "Projects") {
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={`block px-3 py-2 rounded-lg text-base font-medium transition-all duration-300 ${
+                        pathname === item.href
+                          ? "bg-gradient-to-r from-[#31312f] to-[#C8C8C8] text-[#F5F5F5]"
+                          : "text-[#F5F5F5] hover:text-[#31312f] hover:bg-[#E4E4E4]"
+                      }`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                } else {
+                  return (
+                    <div key="Projects">
+                      <button
+                        className={`w-full flex justify-between items-center px-3 py-2 rounded-lg text-base font-medium transition-all duration-300 focus:outline-none ${
+                          pathname.startsWith("/projects")
+                            ? "bg-gradient-to-r from-[#31312f] to-[#C8C8C8] text-[#F5F5F5]"
+                            : "text-[#F5F5F5] hover:text-[#31312f] hover:bg-[#E4E4E4]"
+                        }`}
+                        onClick={() => setShowProjectsSub((prev) => !prev)}
+                        aria-expanded={showProjectsSub}
+                        aria-controls="mobile-projects-submenu"
+                        type="button"
+                      >
+                        Projects
+                        <span className={`ml-2 transition-transform ${showProjectsSub ? "rotate-90" : "rotate-0"}`}>
+                          ▶
+                        </span>
+                      </button>
+                      {showProjectsSub && (
+                        <div id="mobile-projects-submenu" className="pl-4 mt-2 space-y-2">
+                          {mobileProjectCategories.map((cat) => (
+                            <div key={cat.label}>
+                              <div className="text-[#C8C8C8] font-semibold mb-1 text-sm">{cat.label}</div>
+                              <ul className="space-y-1">
+                                {cat.links.map((link) => (
+                                  <li key={link.name}>
+                                    <Link
+                                      href={link.href}
+                                      className="block text-[#C8C8C8] hover:text-[#F5F5F5] text-sm px-2 py-1 rounded"
+                                      onClick={() => {
+                                        setIsOpen(false);
+                                        setShowProjectsSub(false);
+                                      }}
+                                    >
+                                      {link.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+              })}
             </div>
           </div>
         )}
