@@ -175,35 +175,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Meet the Team */}
-      <section className="max-w-6xl mx-auto py-16 px-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center">Meet the Team</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {/* Example team member card, add images as needed */}
-          <div className="bg-[#222] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-[#333] group">
-            <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-700 mb-4 flex items-center justify-center grayscale group-hover:scale-105 transition-all duration-300">
-              {/* <img src="/path/to/photo.jpg" alt="Sahil Ghewari" className="w-full h-full object-cover" /> */}
-              <span className="text-5xl text-white">👨‍💻</span>
-            </div>
-            <h4 className="font-bold text-white mb-1">Sahil Ghewari</h4>
-            <p className="text-gray-400 text-sm mb-2">Co-Founder & Product Lead</p>
-          </div>
-          <div className="bg-[#222] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-[#333] group">
-            <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-700 mb-4 flex items-center justify-center grayscale group-hover:scale-105 transition-all duration-300">
-              <span className="text-5xl text-white">👩‍🎓</span>
-            </div>
-            <h4 className="font-bold text-white mb-1">Pavan Babar</h4>
-            <p className="text-gray-400 text-sm mb-2">Co-Founder & Tech Lead</p>
-          </div>
-          <div className="bg-[#222] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:bg-[#333] group">
-            <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-700 mb-4 flex items-center justify-center grayscale group-hover:scale-105 transition-all duration-300">
-              <span className="text-5xl text-white">👨‍🔬</span>
-            </div>
-            <h4 className="font-bold text-white mb-1">Mangala Sawant</h4>
-            <p className="text-gray-400 text-sm mb-2">Co-Founder & Operations Lead </p>
-          </div>
-        </div>
-      </section>
+
 
       {/* Our Values */}
       <section className="max-w-6xl mx-auto py-16 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
