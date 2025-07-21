@@ -4,8 +4,10 @@ import {
   iconSlugMap,
   animationMap,
 } from "@/data/projectCategories";
+
 import FAQSection from "@/components/custom/FAQSection";
 import HeroCTA from "@/components/custom/Hero-cta";
+import Image from "next/image";
 
 export default async function ProjectCategoryPage({
   params,
@@ -45,9 +47,12 @@ export default async function ProjectCategoryPage({
             {categoryObj.projects?.map((project) => (
               <div key={project.title} className="bg-white rounded-xl shadow border border-[#C8C8C8] flex flex-col items-center p-2 sm:p-4">
                 <div className="w-full aspect-[16/9] mb-3 sm:mb-4 overflow-hidden rounded-lg flex items-center justify-center bg-[#E4E4E4]">
-                  <img
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <Image
                     src={project.image}
                     alt={project.title}
+                    width={400}
+                    height={225}
                     className="object-cover w-full h-full max-h-40 sm:max-h-48 rounded-lg transition-transform duration-300 hover:scale-105"
                     style={{ minHeight: '120px' }}
                   />

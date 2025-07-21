@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
@@ -78,12 +79,12 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="nav-item ">
             <div className="text-2xl font-bold text-[#F5F5F5] flex flex-row items-center gap-3">
-              <img
-              
-              src='https://i.postimg.cc/y6mgZBHc/Logo.png'
-              width={40}
-              height={40}
-              alt="NexaWorks Logo"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <Image
+                src='https://i.postimg.cc/y6mgZBHc/Logo.png'
+                width={40}
+                height={40}
+                alt="NexaWorks Logo"
               />
               <h1>NexaWorks</h1>
             </div>
