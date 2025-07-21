@@ -69,53 +69,53 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <div ref={containerRef} className="min-h-screen font-inter bg-gradient-to-br from-[#18181b] via-[#222226] to-[#2a2a2e] py-0 px-0">
+    <div ref={containerRef} className="min-h-screen font-inter bg-[#31312f] py-0 px-0">
       {/* Hero Section */}
-      <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 bg-gradient-to-br from-[#111] to-[#222]">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#111]/90 to-[#222]/90 z-0 animate-gradient-move"></div>
+      <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 bg-[#31312f]">
+        <div className="absolute inset-0 bg-[#31312f] z-0"></div>
         <div className="relative z-10 max-w-2xl mx-auto">
-          <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6 tracking-tight animate-slide-in">We build the future, one MVP at a time.</h1>
-          <p className="text-base sm:text-xl text-gray-400 mb-8 animate-fade-in">Helping startups launch, scale, and automate with confidence.</p>
+          <h1 className="text-4xl sm:text-6xl font-bold text-[#F5F5F5] mb-6 tracking-tight animate-slide-in">We build the future, one MVP at a time.</h1>
+          <p className="text-base sm:text-xl text-[#C8C8C8] mb-8 animate-fade-in">Helping startups launch, scale, and automate with confidence.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#work" className="inline-block bg-white text-[#111] px-8 py-3 rounded-full font-semibold shadow hover:bg-[#00BFA6] hover:text-white transition-all duration-300">View Our Work</a>
-            <a href="#contact" className="inline-block bg-[#222] text-white px-8 py-3 rounded-full font-semibold shadow hover:bg-[#00BFA6] transition-all duration-300">Talk to Us</a>
+            <a href="/projects/web-development" className="inline-block bg-[#F5F5F5] text-[#31312f] px-8 py-3 rounded-full font-semibold shadow hover:bg-[#C8C8C8] hover:text-[#31312f] transition-all duration-300">View Our Work</a>
+            <a href="#contact" className="inline-block bg-[#31312f] text-[#F5F5F5] px-8 py-3 rounded-full font-semibold shadow hover:bg-[#C8C8C8] hover:text-[#31312f] transition-all duration-300">Talk to Us</a>
           </div>
         </div>
       </section>
 
       {/* Mission & Philosophy */}
-      <section className="max-w-5xl mx-auto py-16 px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-[#1a1a1a] rounded-2xl shadow-lg border border-gray-800">
+      <section className="max-w-5xl mx-auto py-16 px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-[#F5F5F5] rounded-2xl shadow-lg border border-[#C8C8C8]">
         <div className="flex flex-col items-start">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Mission</h2>
-          <span className="text-lg text-gray-400 font-medium mb-4 border-l-4 border-[#00BFA6] pl-4">“Build lean. Deliver fast. Automate always.”</span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#31312f] mb-2">Mission</h2>
+          <span className="text-lg text-[#31312f] font-medium mb-4 border-l-4 border-[#00BFA6] pl-4">“Build lean. Deliver fast. Automate always.”</span>
         </div>
-        <div className="border-l border-gray-600 pl-8">
-          <p className="text-base sm:text-lg text-gray-300 mb-2">NexaWorks helps early-stage companies build, launch, and scale with world-class software and automation. We believe in lean teams, rapid delivery, and empowering founders globally.</p>
+        <div className="border-l border-[#C8C8C8] pl-8">
+          <p className="text-base sm:text-lg text-[#31312f] mb-2">NexaWorks helps early-stage companies build, launch, and scale with world-class software and automation. We believe in lean teams, rapid delivery, and empowering founders globally.</p>
           <div className="h-1 w-16 bg-[#00BFA6] rounded-full mt-4 animate-bar"></div>
         </div>
       </section>
 
       {/* The NexaWorks Edge */}
       <section className="max-w-6xl mx-auto py-16 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        <div className="bg-[#2a2a2e] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
-          <span className="text-4xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></span>
-          <h4 className="font-bold text-white mb-2">MVP-first Thinking</h4>
-          <p className="text-gray-400 text-sm">We specialize in lean, fast MVPs so founders can validate and grow.</p>
+        <div className="bg-[#E4E4E4] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
+          <span className="text-4xl text-[#31312f] mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></span>
+          <h4 className="font-bold text-[#31312f] mb-2">MVP-first Thinking</h4>
+          <p className="text-[#31312f] text-sm">We specialize in lean, fast MVPs so founders can validate and grow.</p>
         </div>
-        <div className="bg-[#2a2a2e] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
-          <span className="text-4xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/></svg></span>
-          <h4 className="font-bold text-white mb-2">Automation DNA</h4>
-          <p className="text-gray-400 text-sm">Every solution is built with automated workflows and scale in mind.</p>
+        <div className="bg-[#E4E4E4] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
+          <span className="text-4xl text-[#31312f] mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/></svg></span>
+          <h4 className="font-bold text-[#31312f] mb-2">Automation DNA</h4>
+          <p className="text-[#31312f] text-sm">Every solution is built with automated workflows and scale in mind.</p>
         </div>
-        <div className="bg-[#2a2a2e] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
-          <span className="text-4xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></span>
-          <h4 className="font-bold text-white mb-2">Talent Incubator</h4>
-          <p className="text-gray-400 text-sm">We train our interns on real-world products before deploying them on client work.</p>
+        <div className="bg-[#E4E4E4] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
+          <span className="text-4xl text-[#31312f] mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></span>
+          <h4 className="font-bold text-[#31312f] mb-2">Talent Incubator</h4>
+          <p className="text-[#31312f] text-sm">We train our interns on real-world products before deploying them on client work.</p>
         </div>
-        <div className="bg-[#2a2a2e] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
-          <span className="text-4xl text-gray-400 mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M2 12a10 10 0 0020 0"/></svg></span>
-          <h4 className="font-bold text-white mb-2">Global Vision</h4>
-          <p className="text-gray-400 text-sm">While rooted in India, we build for global users, markets, and scalability.</p>
+        <div className="bg-[#E4E4E4] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-[#00BFA6]/40 transition-all duration-300">
+          <span className="text-4xl text-[#31312f] mb-2"><svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M2 12a10 10 0 0020 0"/></svg></span>
+          <h4 className="font-bold text-[#31312f] mb-2">Global Vision</h4>
+          <p className="text-[#31312f] text-sm">While rooted in India, we build for global users, markets, and scalability.</p>
         </div>
       </section>
 
