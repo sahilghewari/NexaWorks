@@ -116,7 +116,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div>
-                <label className="block text-[#F5F5F5] mb-2 font-medium" htmlFor="subject">Subject</label>
+                <label className="block text-[#F5F5F5] mb-2 font-medium" htmlFor="Phone No.">Phone No.</label>
                 <input
                   className="w-full px-4 py-3 rounded-lg bg-[#31312f] text-[#F5F5F5] border border-[#C8C8C8] focus:outline-none focus:ring-2 focus:ring-[#00BFA6]"
                   type="text"
