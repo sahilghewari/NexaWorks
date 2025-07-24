@@ -209,7 +209,7 @@ export default function AboutPage() {
       <section className="w-full py-16 px-4 bg-[#111] rounded-2xl shadow-lg text-center mt-16">
         <h2 className="text-3xl font-bold text-white mb-4">Have a vision? Let’s make it real.</h2>
         <p className="text-lg text-gray-400 mb-8">Reach out for MVPs, automations, or strategic tech builds.</p>
-        <a href="#contact" className="inline-block bg-[#00BFA6] text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-[#00BFA6]/40 transition-all duration-300">Start a Conversation</a>
+        <a href="/contact" className="inline-block bg-[#00BFA6] text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:shadow-[#00BFA6]/40 transition-all duration-300">Start a Conversation</a>
       </section>
     </div>
   )
