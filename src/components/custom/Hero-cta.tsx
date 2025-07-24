@@ -7,11 +7,7 @@ export default function HeroCTA() {
   
   const navigate = useNavigate();
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+
   const handleRedirect = () => {
     navigate("/contact"); 
   };
