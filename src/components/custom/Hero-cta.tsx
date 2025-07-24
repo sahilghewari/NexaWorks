@@ -1,21 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
-import { CircleCheckBig } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 
 export default function HeroCTA() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  
   const navigate = useNavigate();
-
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -23,13 +14,9 @@ export default function HeroCTA() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
   const handleRedirect = () => {
-    navigate("/contact"); // Make sure /contact is defined in your routes
+    navigate("/contact"); 
   };
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    // You can handle the form submission here (API call, etc)
-  };
+ 
 
   return (
     <section className="bg-[#F5F5F5] rounded-2xl px-8 py-16 md:py-20 text-center">
