@@ -1,17 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation"; // ✅ Next.js router hook
 
 export default function HeroCTA() {
-  
-  const navigate = useNavigate();
-
+  const router = useRouter();
 
   const handleRedirect = () => {
-    navigate("/contact"); 
+    router.push("/contact"); // ✅ Navigates to /contact route
   };
- 
 
   return (
     <section className="bg-[#F5F5F5] rounded-2xl px-8 py-16 md:py-20 text-center">
