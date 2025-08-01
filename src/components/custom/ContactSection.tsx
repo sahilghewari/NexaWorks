@@ -70,7 +70,7 @@ export default function ContactSection() {
         {/* Left side - Benefits */}
         <div className="mb-10 lg:mb-0">
           <h2 className="text-[#31312f] text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-            Lets Build Something Great Together. 🤝
+            Lets Build Something Great Together. 
           </h2>
           <p className="text-[#C8C8C8] mb-6 sm:mb-8 text-base sm:text-lg">Here is what you will get for submitting your contact details.</p>
 
