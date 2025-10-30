@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NexaWorks Tech
 
-## Getting Started
+## Local Development
 
-First, run the development server:
+- Install dependencies with `npm install`.
+- Start the dev server with `npm run dev` and browse `http://localhost:3000`.
+- Create a `.env.local` file before running the app so sensitive config stays out of source control.
+
+## Employee Verification Setup
+
+### Environment Variables
+
+Add the following entries to `.env.local`:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+GOOGLE_SHEETS_API_KEY=your-google-sheets-api-key
+GOOGLE_SHEETS_SPREADSHEET_ID=your-spreadsheet-id
+# Optional: override the sheet range if you use a different worksheet name or columns
+GOOGLE_SHEETS_RANGE=Employees!A:E
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `GOOGLE_SHEETS_API_KEY` – API key created in Google Cloud Console.
+- `GOOGLE_SHEETS_SPREADSHEET_ID` – the ID from the spreadsheet URL (`https://docs.google.com/spreadsheets/d/<ID>/edit`).
+- `GOOGLE_SHEETS_RANGE` – defaults to `Employees!A:E` and should include the header row with `Code, Name, Role, Achievements, Description`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Restart the dev server whenever you change environment variables.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Google Cloud Configuration
 
-## Learn More
+1. Sign in to [Google Cloud Console](https://console.cloud.google.com/) and create/select a project.
+2. Enable the **Google Sheets API** from *APIs & Services → Library*.
+3. Go to *APIs & Services → Credentials* and create an **API key**.
+4. Restrict the key to the Sheets API if possible (Application restrictions → None, API restrictions → Google Sheets API).
+5. Copy the key into `GOOGLE_SHEETS_API_KEY`.
 
-To learn more about Next.js, take a look at the following resources:
+### Share the Google Sheet
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Open the target spreadsheet.
+2. Click **Share** → **General access** → set to *Anyone with the link* → **Viewer**. This is required when authenticating with an API key.
+3. If you prefer to keep the sheet private, create a Google service account instead, share the sheet with the service account email, and swap the API key flow for a service-account JWT (not implemented here).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Testing the Verification Endpoint
 
-## Deploy on Vercel
+- Submit the `/verify` form in the browser or call the API directly:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+curl -X POST http://localhost:3000/api/verify \
+	-H "Content-Type: application/json" \
+	-d '{"code":"NXW-2025-001"}'
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The response returns the matching employee payload or a 404 error when the code is invalid.
